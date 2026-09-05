@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections from Germany - June/July 2025 — Journals of a Ministry Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #faf7f2 0%, #f5f1ed 100%);
+            font-family: 'Lora', serif;
+            color: #2a2a2a;
+            padding: 60px 20px;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+        }
+
+        .back-nav {
+            margin-bottom: 40px;
+        }
+
+        .back-nav a {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #8b7d6b;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .back-nav a:hover {
+            color: #2a2a2a;
+        }
+        
+        header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid #e6dfd5;
+            padding-bottom: 40px;
+            text-align: left;
+        }
+        
+        .project-title {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8b7d6b;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'Bitter', serif;
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            color: #8b7d6b;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .tag-blue {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .article-body h2 {
+            font-family: 'Bitter', serif;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .article-body p {
+            font-size: 17px;
+            margin-bottom: 24px;
+            color: #333333;
+        }
+
+        .article-body blockquote {
+            border-left: 3px solid #c9a87d;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #5a5246;
+            font-size: 18px;
+        }
+
+        .footnotes {
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid #e6dfd5;
+            font-size: 13px;
+            color: #6b6356;
+        }
+
+        .footnotes h3 {
+            font-family: 'Bitter', serif;
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #2a2a2a;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footnotes ol {
+            padding-left: 20px;
+        }
+
+        .footnotes li {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+            body {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="back-nav">
+            <a href="index.html">&larr; Back to all journals</a>
+        </nav>
+
+        <header>
+            <div class="project-title">Journals of a Ministry Student</div>
+            <h1>Reflections from Germany - June/July 2025</h1>
+            <div class="article-meta">
+                <span class="tag tag-blue">Ministry Reflection</span>
+                <span>•</span>
+                <span class="date">Jul 29, 2025</span>
+            </div>
+        </header>
+        
+        <main class="article-body">
+            <p>Jesus began His ministry by spending forty days in the wilderness. I spent forty-nine days in Berlin.</p>
+            
+            <blockquote>I spent many evenings at Drachenberg delighting in God.</blockquote>
+
+            <p>Originally, I planned to spend this summer doing missionary work. But a mentor of mine, who will be a full-time missionary this fall, offered another idea over coffee. He asked me a question that shifted everything: What if you devoted the summer to ministering to the Lord? He reminded me that our first ministry is always to the Lord<sup>1</sup>, and that Christ spent forty days in the wilderness before He began His ministry. The more I prayed about it, the more peace I found with the idea of going — not to work for God, but simply to be with Him. So, I decided to spend my summer in Berlin deeply pursuing God to prepare to spend the rest of my life in ministry.</p>
+            
+            <p>I came with a few goals: find deeper intimacy with God, explore who God made me to be, and meet and learn from German missionaries. On this trip, I achieved all of that—and far more. If I were to write everything God did and said during this season, this newsletter would never end. But, I’ll summarize and share the most impactful parts.</p>
+
+            <h2>My first night with Jill and Joe</h2>
+            <p>One of the most meaningful parts of the summer was visiting Jill and Joe Vincent, missionaries to a NATO Air Force base in western Germany. I only stayed with them three days, but by the end they were family. Their warmth and hospitality left a deep impression on me.</p>
+            
+            <p>Their ministry was simple yet powerful: they shared the gospel and their lives with the military community. All day long, their home was a revolving door of people as Jill and Joe welcomed, pastored, and loved every single person often through a meal or cup of coffee.</p>
+            
+            <p>Thursday night was Hangar Night, their weekly gathering of more than 100 people. It was an amazing night of great food, worship, and a word on the power of our testimonies. The community was so beautiful; it was clear that the Spirit of God was present. I heard many stories of how God was using their ministry to change people’s lives.</p>
+            
+            <p>Jill and Joe are by far the most hospitable people I have ever met, and the love of Christ is so palpable in their hospitality. They taught me the power of sharing your life with others, and gave me a deeper understanding of Christ’s character. I’m very grateful for their hospitality and love. Their example will influence me and my future ministry profoundly.</p>
+
+            <p>This summer I also found a deeper understanding of the importance of Christian fellowship. Over the last year, God has blessed me with an incredible community of brothers and sisters. We gathered almost every week to share a meal, fellowship, and seek God together in worship and His word. Many who were strangers a year ago are now my dearest friends. While just a few years ago I had only a handful of deep relationships, this last year God made me the richest person in the world — blessing me with a multitude of deep, impactful relationships.</p>
+            
+            <p>Taking seven weeks away from this community has brought me so much gratitude for what God has given me at Heartland. The hardest part about this summer was the distance from these relationships. But, the pain wasn’t wasted, the distance has only served to create a greater appreciation and love for these brothers and sisters.</p>
+
+            <h2>Diving into His word by a stream in Tiergarten</h2>
+            <p>I intentionally planned for a plethora of free time to dive deep into the Word of God and it proves true that the more you eat, the hungrier you become. Lately I’ve been feasting on His word and I can’t get enough!</p>
+            
+            <p>One of the things God spoke to me was what it means to bear my cross and follow Him (Luke 9:23). In reading the Gospels it’s clear that Christ didn’t live for Himself. He had all the power to come off of the cross and avoid the pain but rather He chose to suffer. He gave up heaven, He lived humbly, He was abused, He was mocked, and He bore the sins of the world on the cross, not for Himself — He did it for his beloved (us) (Philippians 2:6-8). And He calls us to do likewise, to carry our cross daily. It’s easy to get caught up in what’s fair and what’s right. It’s easy to get distracted by pleasures and abundance, but Christ calls His followers not to stop at fair, but to yield our rights for our brother’s good just like He did for us (1 John 3:17-18, Philippians 2:4, Romans 12:10)</p>
+            
+            <p>Was it fair that Christ bore our sins so that we could live in His eternal life? Then why am I so concerned with what’s fair for myself?</p>
+            
+            <p>In 1 Corinthians 6:7 Paul rebukes the Corinthians for bringing lawsuits against one another. Paul writes “Why not rather suffer wrong?” If I truly believe the gospel, I should rejoice when I am wronged. Who am I to demand “my rights” or “my possessions” from my brother? If we as a church believe “The greatest among you shall be your servant.” (Matthew 23:11), why aren’t we competing to give everything away to one another?</p>
+            
+            <p>Why would I throw away heavenly treasure by withholding earthly riches from my brother?</p>
+            <p>Are Christians known for loving their neighbors? Are we known as servants?</p>
+            <p>Do I put my pleasure and comfort above my brother’s well-being?</p>
+
+            <blockquote>This was my song for the summer: 139 - Kings Kaleidoscope</blockquote>
+
+            <p>Seeking a deeper sense of who God made me to be, I sought answers in His word. He revealed to me that all mankind was made to bear His image (Genesis 1:27). And while it’s such a basic principle, I found a deeper understanding meditating on His word, that bearing His image means living with His character. As I’ve dwelt in the Scriptures I’ve grown more familiar with God’s peace, love, patience, perfection, and compassion.</p>
+            
+            <p>As I found this deeper understanding of His character, I also saw more clearly how far off the mark I truly am (Romans 3:23). And, the more clearly I saw the gap between my character and His, the more grace I found in Him.</p>
+            
+            <p>As this deeper revelation of His grace took root, I began to understand more fully what it means that it is no longer I who live, but Christ who lives in me (Galatians 2:20). It means that though I don’t measure up, His righteousness can now be my righteousness, His peace; victory; perfection — all can be mine through faith in the cross.</p>
+            
+            <p>It’s basic Christianity that Christ swapped places with me. He bore my brokenness on the cross and freely offers me perfection if I would have the humility and faith to accept it. This summer, it’s become more real and tangible in my life than ever.</p>
+            
+            <p>With this revelation, I’ve found so much more power in the Holy Spirit — which is Christ living in me. It’s no longer just what Dallas Willard calls “the gospel of sin management” in The Divine Conspiracy — I’ve found the gospel of the Kingdom Jesus proclaimed: Where heaven comes to earth in my life, shaping every aspect of how I live and who I’m becoming. As Jesus said, “The kingdom of God is in your midst” (Luke 17:21), and this summer I’ve taken great steps learning to live like that’s true. Learning how to bear the image of Christ, by the power of His Holy Spirit.</p>
+
+            <p>My 49 days in my wilderness — Berlin, Germany — were full of joys and sorrows, intimacy with God and distance, courage and fear, peace and anxiety, good food, some new friends, and adventure. God used every moment to form me more into the Man of God that He created me to be.</p>
+            
+            <p>My mentor Nito was right, my first ministry always has to be to the Lord. In the intimacy with God this summer, I learned so much. Not head knowledge so I can get the answers right on a test — I had plenty of that already. God taught me things I was only able to learn by accepting His invitation — “Follow me” (Mark 1:17). Jesus never asked me to be His employee, working for Him in exchange for eternal life. Rather He invited me to be His apprentice/disciple. His invitation is to follow Him, to be with him and to learn from Him as He patiently instructs my heart, forming me into His image.</p>
+
+            <p>This summer was an incredible time of seeking God! I spent the vast majority of my time in Berlin, but I also got to travel to Munich, Oberammergau, Cologne, Wismar, and Potsdam. I met many great people, ate a lot of great food, but by far the best part was the time with my heavenly Father.</p>
+            
+            <h2>I have lots of Gratitude to God for:</h2>
+            <p>
+                • Zoe and Shawn’s hospitality in hosting me most of the summer.<br>
+                • Jill and Joe’s hospitality for the three days I spent with them.<br>
+                • The amazing people I met along the way!<br>
+                • The financial ability to take this trip and those who helped me get here.<br>
+                • My many brothers and sisters in Christ that I am returning home to.
+            </p>
+
+            <p>I’m looking forward to returning in August to apply all my growth into my daily life as I step into the many exciting things God has prepared for me:</p>
+            <p>
+                • <strong>21 Days of Prayer</strong> starts August 3rd, where my church will gather daily at 6 am to pray. It’s always a time of spiritual growth, miraculous works of God, and great joy gathering in fellowship everyday. I cannot wait to see the incredible ways God will move as we seek him together.<br>
+                • <strong>Classes at Heartland college</strong> start on the 26th, and I am beyond excited to be full time! I’m expecting God to do great things through these next few years at HC.<br>
+                • Catching up with friends & mentors to share all the many stories and works of God from this summer.<br>
+                • Beginning to serve as a Young Life leader!
+            </p>
+
+            <h2>Prayer Requests:</h2>
+            <p>
+                • Guidance as I reengage with church/serving to find a rhythm of work and rest that glorifies God.<br>
+                • For Tim and Lori Hawkins to reach the necessary funding to attend the next training session as they continue their journey towards being church planters in Berlin.<br>
+                • For a great start to the school year, that my learning would lead me to deeper intimacy with Christ rather than puff me up as knowledge tends to do.
+            </p>
+
+            <p>I started this little newsletter to share updates with those who wish to follow along on the journey that God is taking me on. I plan to make one every month but, “A man’s heart plans his way, but the Lord directs his steps.” I appreciate you taking time to read, pray, and invest in my life in whatever way you do so. Thank you! “My love be with you all in Christ Jesus”.</p>
+        </main>
+
+        <footer class="footnotes">
+            <h3>Footnotes & Bibliography</h3>
+            <ol>
+                <li>If you’re not familiar with the phrase “ministry to the Lord”, it’s basically devotion to the person of God. It’s intentionally taking time to "Love the Lord your God with all your heart and with all your soul and with all your strength." (Deuteronomy 6:5).</li>
+            </ol>
+        </footer>
+    </div>
+</body>
+</html>
