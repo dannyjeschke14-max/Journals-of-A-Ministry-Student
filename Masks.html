@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taking Off Our Masks — Journals of a Ministry Student</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Bitter:wght@600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,122 +13,158 @@
         }
         
         body {
-            background: linear-gradient(135deg, #faf7f2 0%, #f5f1ed 100%);
+            background-color: #e6dfd3;
+            background-image: radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
             font-family: 'Lora', serif;
-            color: #2a2a2a;
-            padding: 60px 20px;
+            color: #1a1612;
+            padding: 30px 40px;
             min-height: 100vh;
-            line-height: 1.8;
         }
         
-        .container {
-            max-width: 740px;
+        .newspaper-container {
+            width: 100%;
+            max-width: 1100px;
             margin: 0 auto;
+            border: 1px solid #1a1612;
+            padding: 30px 45px;
+            background: transparent;
         }
 
+        /* Top Navigation */
         .back-nav {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 10px;
         }
 
         .back-nav a {
-            font-size: 13px;
+            font-family: 'Bitter', serif;
+            font-size: 11px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             text-decoration: none;
-            color: #8b7d6b;
-            font-weight: 600;
+            color: #594839;
+            font-weight: 700;
             transition: color 0.2s ease;
         }
 
         .back-nav a:hover {
-            color: #2a2a2a;
+            color: #1a1612;
         }
         
-        header {
-            margin-bottom: 50px;
-            border-bottom: 1px solid #e6dfd5;
-            padding-bottom: 40px;
-            text-align: left;
+        /* Masthead / Article Header */
+        header.article-header {
+            text-align: center;
+            border-bottom: 2px solid #1a1612;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
-        
+
         .project-title {
-            font-size: 13px;
+            font-family: 'Bitter', serif;
+            font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #8b7d6b;
-            font-weight: 500;
+            color: #594839;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        h1.headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            font-weight: 900;
+            color: #1a1612;
+            line-height: 1.15;
+            text-transform: uppercase;
             margin-bottom: 15px;
         }
-
-        h1 {
-            font-family: 'Bitter', serif;
-            font-size: 38px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-            line-height: 1.25;
-        }
         
-        .article-meta {
+        /* Issue Bar / Date Line */
+        .issue-bar {
+            border-top: 1px solid #1a1612;
+            border-bottom: 3px double #1a1612;
+            padding: 6px 10px;
+            margin-bottom: 30px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 15px;
-            font-size: 13px;
-            color: #8b7d6b;
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #594839;
         }
 
-        .tag {
-            display: inline-block;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-        
-        .tag-amber {
-            background-color: #fef3c7;
-            color: #92400e;
-        }
-        
-        .article-body h2 {
-            font-family: 'Bitter', serif;
-            font-size: 24px;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
+        /* Article Body Newspaper Layout */
+        .article-body {
+            column-count: 2;
+            column-gap: 40px;
+            column-rule: 1px solid #1a1612;
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+            color: #2b231b;
         }
 
         .article-body p {
-            font-size: 17px;
-            margin-bottom: 24px;
-            color: #333333;
+            margin-bottom: 18px;
+            text-indent: 18px;
         }
 
+        .article-body p.no-indent {
+            text-indent: 0;
+        }
+
+        .dropcap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            float: left;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 8px;
+            font-weight: 900;
+        }
+
+        /* Pull-Quote Styling */
         .article-body blockquote {
-            border-left: 3px solid #c9a87d;
-            padding-left: 20px;
-            margin: 30px 0;
+            column-span: all;
+            border-top: 2px solid #1a1612;
+            border-bottom: 2px solid #1a1612;
+            padding: 18px 25px;
+            margin: 25px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
             font-style: italic;
-            color: #5a5246;
-            font-size: 18px;
+            line-height: 1.35;
+            text-align: center;
+            color: #1a1612;
+            background: rgba(0,0,0,0.015);
         }
 
+        .article-body blockquote sup {
+            font-style: normal;
+            font-size: 14px;
+        }
+
+        /* Bibliography / Footnotes */
         .footnotes {
-            margin-top: 60px;
-            padding-top: 25px;
-            border-top: 1px solid #e6dfd5;
-            font-size: 13px;
-            color: #6b6356;
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 3px double #1a1612;
+            font-size: 12px;
+            color: #594839;
         }
 
         .footnotes h3 {
             font-family: 'Bitter', serif;
-            font-size: 16px;
-            margin-bottom: 12px;
-            color: #2a2a2a;
-            letter-spacing: 1px;
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #1a1612;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .footnotes ol {
@@ -136,38 +172,53 @@
         }
 
         .footnotes li {
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 30px;
+
+        @media (max-width: 850px) {
+            .article-body {
+                column-count: 1;
+                column-rule: none;
+            }
+            h1.headline {
+                font-size: 32px;
+            }
+            .newspaper-container {
+                padding: 20px;
             }
             body {
-                padding: 40px 15px;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="newspaper-container">
+        
+        <!-- Navigation -->
         <nav class="back-nav">
-            <a href="index.html">&larr; Back to all journals</a>
+            <a href="index.html">&larr; Back to Main Edition</a>
         </nav>
 
-        <header>
+        <!-- Article Masthead -->
+        <header class="article-header">
             <div class="project-title">Journals of a Ministry Student</div>
-            <h1>What Would It Look Like If We All Took Off Our Masks?</h1>
-            <div class="article-meta">
-                <span class="tag tag-amber">Personal Reflection</span>
-                <span>•</span>
-                <span class="date">Oct 02, 2026</span>
-            </div>
+            <h1 class="headline">What Would It Look Like If We All Took Off Our Masks?</h1>
         </header>
-        
+
+        <!-- Issue / Meta Bar -->
+        <div class="issue-bar">
+            <span>FEATURE DISPATCH</span>
+            <span>CATEGORY: PERSONAL REFLECTION</span>
+            <span>PUBLISHED: OCT 02, 2026</span>
+        </div>
+
+        <!-- Newspaper Article Body -->
         <main class="article-body">
-            <p>What would it look like if we all took off our masks?</p>
             
+            <p class="no-indent dropcap">What would it look like if we all took off our masks?</p>
+
             <blockquote>“The good news means that I can stop lying to myself… Because of this, I don’t need to apply spiritual cosmetics to make myself presentable to him.”<sup>1</sup></blockquote>
 
             <p>Everyone, whether they know it or not, wears spiritual cosmetics, some kind of mask that distorts the reality of who they are. Oftentimes, people don’t even realize they’re wearing a mask because our masks have gotten so good, we believe them ourselves. Personally, I’ve been wrestling with finding a beautiful in-between when it comes to how I see myself because here are the two extremes that each pull us towards themselves: self-loathing and pride.</p>
@@ -181,14 +232,18 @@
             <p>I don’t know if you can relate to this struggle, but if you can, come on the journey with me. There’s no prescribed process; I don’t think there’s a formula that can deconstruct our masks. All I know is the first step: to recognize that the narratives that I believe about myself and project to the world are sometimes self-constructed defense mechanisms designed to keep me safe from rejection, pain, and shame.</p>
 
             <p>Brennan Manning's book <em>The Ragamuffin Gospel</em> is helping me to reframe my perspective. Because the Gospel of Jesus means I don’t have to lie to myself anymore. I don’t have to prove myself, I don’t have to create false selves to protect me from rejection, pain, and shame because the cross of Jesus gives me hope. Hope that there’s a God in heaven who will never reject me. Hope that I don’t go through pain alone, but I have a friend beside me in the pain giving me purpose and endurance. Hope that despite the most detestable parts of me, the ugliest of my sin, shame no longer holds any authority.</p>
+
         </main>
 
+        <!-- Bibliography -->
         <footer class="footnotes">
             <h3>Bibliography</h3>
             <ol>
                 <li>Brennan Manning, <em>The Ragamuffin Gospel</em> (Multnomah Books).</li>
             </ol>
         </footer>
+
     </div>
+
 </body>
 </html>
