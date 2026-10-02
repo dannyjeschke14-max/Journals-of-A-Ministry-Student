@@ -4,181 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflection On Israel's Refusal to Enter the Promised Land — Journals of a Ministry Student</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Bitter:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-primary: #faf7f2;
-            --bg-secondary: #ffffff;
-            --text-primary: #2a2a2a;
-            --text-secondary: #5a5246;
-            --text-muted: #8b7d6b;
-            --accent: #c9a87d;
-            --border: #e6dfd5;
-            --tag-bg: #fef3c7;
-            --tag-text: #92400e;
-            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s ease;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-primary: #121212;
-                --bg-secondary: #1e1e1e;
-                --text-primary: #e0e0e0;
-                --text-secondary: #a0a0a0;
-                --text-muted: #808080;
-                --accent: #c9a87d;
-                --border: #2d2d2d;
-                --tag-bg: #372f1f;
-                --tag-text: #fcd34d;
-                --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            }
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            background-color: var(--bg-primary);
+            background-color: #e6dfd3;
+            background-image: radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
             font-family: 'Lora', serif;
-            color: var(--text-primary);
-            padding: 60px 20px;
+            color: #1a1612;
+            padding: 30px 40px;
             min-height: 100vh;
-            line-height: 1.8;
-            transition: var(--transition);
         }
-
-        .container {
-            max-width: 740px;
+        
+        .newspaper-container {
+            width: 100%;
+            max-width: 1100px;
             margin: 0 auto;
+            border: 1px solid #1a1612;
+            padding: 30px 45px;
+            background: transparent;
         }
 
+        /* Top Navigation */
         .back-nav {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 10px;
         }
 
         .back-nav a {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
+            font-family: 'Bitter', serif;
+            font-size: 11px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
+            color: #594839;
+            font-weight: 700;
+            transition: color 0.2s ease;
         }
 
         .back-nav a:hover {
-            color: var(--text-primary);
-            transform: translateX(-4px);
+            color: #1a1612;
         }
-
-        header {
-            margin-bottom: 50px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 40px;
+        
+        /* Masthead / Article Header */
+        header.article-header {
+            text-align: center;
+            border-bottom: 2px solid #1a1612;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
 
         .project-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
+            font-family: 'Bitter', serif;
+            font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--text-muted);
-            font-weight: 600;
+            color: #594839;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        h1.headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 900;
+            color: #1a1612;
+            line-height: 1.15;
+            text-transform: uppercase;
             margin-bottom: 15px;
         }
-
-        h1 {
-            font-family: 'Bitter', serif;
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-            line-height: 1.25;
-            color: var(--text-primary);
-        }
-
-        .article-meta {
+        
+        /* Issue Bar / Date Line */
+        .issue-bar {
+            border-top: 1px solid #1a1612;
+            border-bottom: 3px double #1a1612;
+            padding: 6px 10px;
+            margin-bottom: 25px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 12px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .tag {
-            display: inline-block;
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            background-color: var(--tag-bg);
-            color: var(--tag-text);
-        }
-
-        .article-body {
-            font-size: 18px;
-        }
-
-        .article-body h2 {
             font-family: 'Bitter', serif;
-            font-size: 26px;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            color: var(--text-primary);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #594839;
+        }
+
+        /* Opening Intro Paragraph */
+        .opening-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1a1612;
+            padding: 0 20px;
+        }
+
+        /* Article Body Newspaper Layout */
+        .article-body {
+            column-count: 2;
+            column-gap: 40px;
+            column-rule: 1px solid #1a1612;
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+            color: #2b231b;
         }
 
         .article-body p {
-            margin-bottom: 24px;
-            color: var(--text-secondary);
+            margin-bottom: 18px;
+            text-indent: 18px;
         }
 
+        .article-body p.no-indent {
+            text-indent: 0;
+        }
+
+        .dropcap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            float: left;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 8px;
+            font-weight: 900;
+        }
+
+        /* Pull-Quote Styling */
         .article-body blockquote {
-            border-left: 3px solid var(--accent);
-            padding: 10px 0 10px 24px;
-            margin: 36px 0;
+            column-span: all;
+            border-top: 2px solid #1a1612;
+            border-bottom: 2px solid #1a1612;
+            padding: 18px 25px;
+            margin: 25px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
             font-style: italic;
-            color: var(--text-primary);
-            font-size: 19px;
-            background: linear-gradient(90deg, rgba(201, 168, 125, 0.05) 0%, transparent 100%);
-            border-radius: 0 8px 8px 0;
+            line-height: 1.4;
+            text-align: center;
+            color: #1a1612;
+            background: rgba(0,0,0,0.015);
         }
 
         .article-body blockquote sup {
             font-style: normal;
+            font-size: 14px;
         }
 
-        sup {
-            font-size: 12px;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
+        /* Bibliography / Footnotes */
         .footnotes {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            color: var(--text-muted);
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 3px double #1a1612;
+            font-size: 12px;
+            color: #594839;
         }
 
         .footnotes h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            margin-bottom: 16px;
-            color: var(--text-primary);
+            font-family: 'Bitter', serif;
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #1a1612;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             font-weight: 700;
@@ -186,66 +180,71 @@
 
         .footnotes ol {
             padding-left: 20px;
-            line-height: 1.6;
         }
 
         .footnotes li {
-            margin-bottom: 10px;
+            margin-bottom: 4px;
         }
 
-        .footnotes li::marker {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 30px 18px;
-            }
-
-            h1 {
-                font-size: 30px;
-            }
-
+        @media (max-width: 850px) {
             .article-body {
-                font-size: 17px;
+                column-count: 1;
+                column-rule: none;
             }
-
-            .article-body blockquote {
-                font-size: 18px;
-                padding-left: 18px;
+            h1.headline {
+                font-size: 32px;
+            }
+            .newspaper-container {
+                padding: 20px;
+            }
+            body {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="newspaper-container">
+        
+        <!-- Navigation -->
         <nav class="back-nav">
-            <a href="index.html">&larr; Back to all journals</a>
+            <a href="index.html">&larr; Back to Main Edition</a>
         </nav>
 
-        <header>
+        <!-- Article Masthead -->
+        <header class="article-header">
             <div class="project-title">Journals of a Ministry Student</div>
-            <h1>Reflection On Israel's Refusal to Enter the Promised Land</h1>
-            <div class="article-meta">
-                <span class="tag">Old Testament</span>
-                <span>•</span>
-                <span class="date">Sep 05, 2026</span>
-            </div>
+            <h1 class="headline">Reflection On Israel's Refusal to Enter the Promised Land</h1>
         </header>
-        
-        <main class="article-body">
-            <p>How does Israel's refusal to enter the Promised Land affect their future? Do we make similar life-changing decisions today?</p>
-            
-            <blockquote>“Then Joshua the son of Nun and Caleb the son of Jephunneh… said to all the congregation of the people of Israel… ‘Their protection is removed from them, and the Lord is with us; do not fear them.’ Then all the congregation said to stone them with stones.”<sup>1</sup></blockquote>
 
-            <p>The people of Israel have been instructed to enter the promised land which they have just received word that it is as fruitful and abundant as God promised it would be. God promised a land flowing with milk and honey and that’s exactly what he delivered and that’s what the spies reported was in the promised land. Yet, fear overtook the Israelites and kept them from following the command of God to enter into the promised land because the armies which resided in the promised land were greater than Israel's. This decision revealed Israel's hardness of heart. In a narrative similar to Exodus 32, God sets his sights on destroying the people of Israel and starting a new nation from Moses, but Moses intercedes on behalf of the people and the Lord relents.</p>
+        <!-- Issue / Meta Bar -->
+        <div class="issue-bar">
+            <span>CATEGORY: OLD TESTAMENT</span>
+            <span>PUBLISHED: SEP 05, 2026</span>
+        </div>
+
+        <!-- Opening Question -->
+        <div class="opening-question">
+            “How does Israel's refusal to enter the Promised Land affect their future? Do we make similar life-changing decisions today?”
+        </div>
+
+        <!-- Newspaper Article Body -->
+        <main class="article-body">
+
+            <blockquote>
+                “Then Joshua the son of Nun and Caleb the son of Jephunneh… said to all the congregation of the people of Israel… ‘Their protection is removed from them, and the Lord is with us; do not fear them.’ Then all the congregation said to stone them with stones.”<sup>1</sup>
+            </blockquote>
+
+            <p class="no-indent dropcap">The people of Israel have been instructed to enter the promised land which they have just received word that it is as fruitful and abundant as God promised it would be. God promised a land flowing with milk and honey and that’s exactly what he delivered and that’s what the spies reported was in the promised land. Yet, fear overtook the Israelites and kept them from following the command of God to enter into the promised land because the armies which resided in the promised land were greater than Israel's. This decision revealed Israel's hardness of heart. In a narrative similar to Exodus 32, God sets his sights on destroying the people of Israel and starting a new nation from Moses, but Moses intercedes on behalf of the people and the Lord relents.</p>
             
             <p>This marks a turning point for Israel, and he leads the congregation into the wilderness, which biblically symbolizes a place of formation, to spend the next forty years forming the people of Israel into a faithful people. We see this formation begin in Chapter 15 directly after Israel's defiance of God and their futile attempt to clean up their mess on their own apart from God. God reminds the Israelites of the systems designed to keep them from turning away from Him once they enter the promised land which is a system of Mercy and Grace at the cost of the humility to admit their sinfulness and offer a sacrifice.</p>
             
             <p>Our Textbook summarized the report of the spies by saying, “Life there would be preferable to living in the desert.”<sup>2</sup> Yet, their fear convinces the congregation that God doesn’t have their best interest at heart and he has just brought them there to die. It’s easy to look at the Israelites and think, “how foolish of them not to listen to God.” But the reality is we do this almost daily. God gives us direction, commands, and callings and yet, timidity and fear keep us from stepping into them. There’s moments when it’s clear that following God’s way is so much better than our current situation like the promised land was for the Israelites. But because of fear, we choose to go our own way and sit in harder times. All of it stems from the same temptation from the garden. The tempter tells us that God can’t be trusted and he doesn’t have our own best interest in mind. The temptation is then to usurp the position of God and become Lord of our life, doing as we please. And it’s there that we find ourselves dying in the desert rather than living peacefully with God in the promised land.</p>
+
         </main>
 
+        <!-- Bibliography -->
         <footer class="footnotes">
             <h3>Bibliography</h3>
             <ol>
@@ -253,6 +252,8 @@
                 <li>Paul R. House and Eric Mitchell, <em>Old Testament Survey</em>, 3rd ed. (Nashville: B&H Academic, 2023), 102.</li>
             </ol>
         </footer>
+
     </div>
+
 </body>
 </html>
