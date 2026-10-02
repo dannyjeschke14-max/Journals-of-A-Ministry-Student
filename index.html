@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Journals Of A Ministry Student</title>
+    <title>Journals of a Ministry Student</title>
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Bitter:wght@600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,8 +14,7 @@
         
         body {
             background-color: #e6dfd3;
-            background-image: 
-                radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
+            background-image: radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
             font-family: 'Lora', serif;
             color: #1a1612;
             padding: 30px 40px;
@@ -27,44 +26,21 @@
             max-width: 1550px;
             margin: 0 auto;
             border: 1px solid #1a1612;
-            padding: 25px 35px;
+            padding: 30px 40px;
             background: transparent;
         }
 
-        /* Top Bar Header Layout */
-        .masthead-top {
-            display: grid;
-            grid-template-columns: 220px 1fr 220px;
-            align-items: center;
+        /* Masthead Layout */
+        header.masthead-top {
+            text-align: center;
             border-bottom: 2px solid #1a1612;
             padding-bottom: 15px;
-            gap: 20px;
-        }
-
-        .ear-box {
-            border: 1px solid #1a1612;
-            padding: 8px 12px;
-            font-size: 11px;
-            line-height: 1.4;
-            text-align: center;
-            background: rgba(0,0,0,0.02);
-        }
-
-        .ear-box h4 {
-            font-family: 'Bitter', serif;
-            font-size: 11px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #1a1612;
-            padding-bottom: 3px;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
         }
 
         h1.masthead-title {
             font-family: 'UnifrakturMaguntia', 'Playfair Display', serif;
-            font-size: 82px;
+            font-size: 88px;
             font-weight: 400;
-            text-align: center;
             color: #1a1612;
             line-height: 0.95;
             letter-spacing: -1px;
@@ -75,7 +51,7 @@
             border-top: 1px solid #1a1612;
             border-bottom: 3px double #1a1612;
             padding: 6px 10px;
-            margin: 10px 0 30px 0;
+            margin: 12px 0 28px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -86,35 +62,46 @@
             letter-spacing: 1px;
         }
 
+        /* Section Banner */
+        .section-banner {
+            border-top: 2px solid #1a1612;
+            border-bottom: 1px solid #1a1612;
+            text-align: center;
+            padding: 6px 0;
+            margin-bottom: 30px;
+        }
+
+        .section-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         /* Main Grid Structure */
         .main-newspaper-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            gap: 30px;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 35px;
             margin-bottom: 40px;
         }
 
-        /* Columns & Section Borders */
         .newspaper-col {
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
 
-        .newspaper-col.border-left {
-            border-left: 1px solid #1a1612;
-            padding-left: 30px;
-        }
-
         .newspaper-col.border-right {
             border-right: 1px solid #1a1612;
-            padding-right: 30px;
+            padding-right: 35px;
         }
 
         /* Publisher's Notice / Explanation Box */
         .publisher-notice {
             border: 2px solid #1a1612;
-            padding: 18px;
+            padding: 22px;
             position: relative;
             background: rgba(0,0,0,0.015);
         }
@@ -122,7 +109,7 @@
         .publisher-notice::before {
             content: '';
             position: absolute;
-            top: 3px; left: 3px; right: 3px; bottom: 3px;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
             border: 1px solid #1a1612;
             pointer-events: none;
         }
@@ -140,80 +127,66 @@
         }
 
         .notice-body {
-            font-size: 13.5px;
-            line-height: 1.6;
+            font-size: 14px;
+            line-height: 1.65;
             text-align: justify;
             color: #261f18;
         }
 
-        /* Section Headlines */
-        .section-banner {
-            border-top: 2px solid #1a1612;
-            border-bottom: 1px solid #1a1612;
-            text-align: center;
-            padding: 6px 0;
-            margin-bottom: 25px;
-        }
-
-        .section-banner h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 26px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Interactive Article Box Styles */
-        .story-block {
+        /* Interactive Newspaper Story Cards */
+        .story-card {
             text-decoration: none;
             color: inherit;
-            display: block;
-            border-bottom: 1px solid #1a1612;
-            padding-bottom: 22px;
-            transition: background 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #1a1612;
+            padding: 24px;
+            background: rgba(253, 251, 247, 0.4);
+            position: relative;
+            transition: all 0.2s ease;
+            box-shadow: 2px 2px 0px #1a1612;
         }
 
-        .story-block:last-child {
-            border-bottom: none;
-        }
-
-        .story-block:hover h3, .story-block:hover h2 {
-            text-decoration: underline;
+        .story-card:hover {
+            background: #fdfbf7;
+            transform: translateY(-3px);
+            box-shadow: 4px 4px 0px #1a1612;
         }
 
         .story-kicker {
             font-family: 'Bitter', serif;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #594839;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
-        .story-block h2 {
+        .story-card h2 {
             font-family: 'Playfair Display', serif;
             font-size: 34px;
             font-weight: 900;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 12px;
             text-transform: uppercase;
         }
 
-        .story-block h3 {
+        .story-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 900;
             line-height: 1.25;
             margin-bottom: 10px;
         }
 
         .story-text {
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 14.5px;
+            line-height: 1.65;
             text-align: justify;
             color: #2b231b;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
+            flex-grow: 1;
         }
 
         .dropcap::first-letter {
@@ -234,11 +207,12 @@
             display: flex;
             justify-content: space-between;
             color: #594839;
-            border-top: 1px stroke #1a1612;
-            padding-top: 6px;
+            border-top: 1px solid #1a1612;
+            padding-top: 8px;
+            margin-top: auto;
         }
 
-        /* Bio Section at Bottom */
+        /* Bottom Bio Section */
         .author-section {
             border-top: 3px double #1a1612;
             padding-top: 30px;
@@ -317,14 +291,10 @@
             .main-newspaper-grid {
                 grid-template-columns: 1fr;
             }
-            .newspaper-col.border-left, .newspaper-col.border-right {
-                border: none;
-                padding: 0;
+            .newspaper-col.border-right {
+                border-right: none;
+                padding-right: 0;
             }
-            .masthead-top {
-                grid-template-columns: 1fr;
-            }
-            .ear-box { display: none; }
             h1.masthead-title { font-size: 52px; }
             .bio-container { grid-template-columns: 1fr; }
         }
@@ -334,19 +304,9 @@
 
     <div class="newspaper-container">
         
-        <!-- Masthead -->
+        <!-- Header / Masthead -->
         <header class="masthead-top">
-            <div class="ear-box">
-                <h4>Today's Purpose</h4>
-                <p>Authentic reflections on ministry, hermeneutics, and walking with Christ.</p>
-            </div>
-            
-            <h1 class="masthead-title">Daily Newspaper</h1>
-            
-            <div class="ear-box">
-                <h4>Location & Note</h4>
-                <p>Noblesville, IN<br>High School Ministry & Discipleship</p>
-            </div>
+            <h1 class="masthead-title">Journals of a Ministry Student</h1>
         </header>
 
         <!-- Issue Bar -->
@@ -362,33 +322,14 @@
             <h2>Latest Journals</h2>
         </div>
 
-        <!-- Main Newspaper 3-Column Layout -->
+        <!-- Newspaper Grid -->
         <main class="main-newspaper-grid">
             
-            <!-- Left Column: Publisher's Notice & Secondary Story -->
+            <!-- Left Column: Lead Story & Germany Reflection -->
             <div class="newspaper-col border-right">
                 
-                <!-- Publisher's Notice (Explanation of Journal) -->
-                <div class="publisher-notice">
-                    <div class="notice-header">Publisher's Note</div>
-                    <p class="notice-body dropcap">This project is a creative space to process my journey in ministry and theology; a deliberate step away from the pressure of perfectionism I feel in my class writings and into authenticity. I believe God made us all to create things that reflect both who we are and who He is. For me, that medium is writing. My hope is that these journals serve as a window into my passions and honest wrestling.</p>
-                </div>
-
-                <a href="promised-land.html" class="story-block">
-                    <div class="story-kicker">Exegesis & Application</div>
-                    <h3>Reflection On Israel's Refusal to Enter Promised Land</h3>
-                    <p class="story-text">Exploring Israel's fearful refusal of the Promised Land, this journal reflection examines how modern believers similarly succumb to timidity and spiritual distrust when faced with God's clear calling.</p>
-                    <div class="story-meta">
-                        <span>Class Journal</span>
-                        <span>Sep 05, 2026</span>
-                    </div>
-                </a>
-
-            </div>
-
-            <!-- Center Column: Lead Featured Story -->
-            <div class="newspaper-col">
-                <a href="Masks.html" class="story-block">
+                <!-- Lead Story Card -->
+                <a href="Masks.html" class="story-card">
                     <div class="story-kicker">Lead Article • Special Feature</div>
                     <h2>What Would It Look Like If We All Took Off Our Masks?</h2>
                     <p class="story-text dropcap">Everyone, whether they know it or not, wears spiritual cosmetics—some kind of mask that distorts the reality of who they are. Exploring the deep tension between pride and self-loathing, this reflection looks at how the Gospel frees us from fabricating false selves to protect against rejection, pain, and shame in our daily walks.</p>
@@ -397,12 +338,9 @@
                         <span>Oct 02, 2026</span>
                     </div>
                 </a>
-            </div>
 
-            <!-- Right Column: Additional Stories -->
-            <div class="newspaper-col border-left">
-                
-                <a href="berlin-summer-2025.html" class="story-block">
+                <!-- Germany Travel Journal Card -->
+                <a href="berlin-summer-2025.html" class="story-card">
                     <div class="story-kicker">Field Dispatches</div>
                     <h3>Reflections from Germany - Summer 2025</h3>
                     <p class="story-text">My reflections from a two-month spiritual retreat in Germany, processing culture, quietude, global discipleship, and cross-cultural ministry.</p>
@@ -412,13 +350,25 @@
                     </div>
                 </a>
 
-                <a href="#" class="story-block">
-                    <div class="story-kicker">Hermeneutics</div>
-                    <h3>Epistemological Humility in Contemporary Frameworks</h3>
-                    <p class="story-text">Navigating objectivism and extreme skepticism to construct a steady, grounded approach to classic textual hermeneutics today.</p>
+            </div>
+
+            <!-- Right Column: Publisher's Note & Israel Story -->
+            <div class="newspaper-col">
+                
+                <!-- Publisher's Notice -->
+                <div class="publisher-notice">
+                    <div class="notice-header">Publisher's Note</div>
+                    <p class="notice-body dropcap">This project is a creative space to process my journey in ministry and theology; a deliberate step away from the pressure of perfectionism I feel in my class writings and into authenticity. I believe God made us all to create things that reflect both who we are and who He is. For me, that medium is writing. My hope is that these journals serve as a window into my passions and honest wrestling.</p>
+                </div>
+
+                <!-- Promised Land Class Journal Card -->
+                <a href="promised-land.html" class="story-card">
+                    <div class="story-kicker">Exegesis & Application</div>
+                    <h3>Reflection On Israel's Refusal to Enter Promised Land</h3>
+                    <p class="story-text">Exploring Israel's fearful refusal of the Promised Land, this journal reflection examines how modern believers similarly succumb to timidity and spiritual distrust when faced with God's clear calling.</p>
                     <div class="story-meta">
-                        <span>Theology</span>
-                        <span>Jul 30, 2026</span>
+                        <span>Class Journal</span>
+                        <span>Sep 05, 2026</span>
                     </div>
                 </a>
 
