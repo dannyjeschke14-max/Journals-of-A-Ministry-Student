@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Journals Of A Ministry Student</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Bitter:wght@600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,409 +13,434 @@
         }
         
         body {
-            background-color: #f4efe6;
-            background-image: radial-gradient(circle at 50% 50%, #f7f3eb 0%, #ebe2d3 100%);
+            background-color: #e6dfd3;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
             font-family: 'Lora', serif;
             color: #1a1612;
-            padding: 40px 50px;
+            padding: 30px 40px;
             min-height: 100vh;
         }
         
-        .newspaper-wrapper {
+        .newspaper-container {
             width: 100%;
-            max-width: 1600px;
+            max-width: 1550px;
             margin: 0 auto;
-            border-top: 5px solid #1a1612;
-            border-bottom: 5px solid #1a1612;
-            padding: 30px 10px;
-            background: rgba(251, 248, 242, 0.7);
+            border: 1px solid #1a1612;
+            padding: 25px 35px;
+            background: transparent;
         }
 
-        /* Newspaper Header / Masthead */
-        header {
-            text-align: center;
+        /* Top Bar Header Layout */
+        .masthead-top {
+            display: grid;
+            grid-template-columns: 220px 1fr 220px;
+            align-items: center;
             border-bottom: 2px solid #1a1612;
-            padding-bottom: 20px;
-            margin-bottom: 12px;
+            padding-bottom: 15px;
+            gap: 20px;
         }
 
-        .edition-tag {
+        .ear-box {
+            border: 1px solid #1a1612;
+            padding: 8px 12px;
+            font-size: 11px;
+            line-height: 1.4;
+            text-align: center;
+            background: rgba(0,0,0,0.02);
+        }
+
+        .ear-box h4 {
             font-family: 'Bitter', serif;
-            font-size: 12px;
-            letter-spacing: 3px;
+            font-size: 11px;
             text-transform: uppercase;
-            font-weight: 700;
-            color: #6b5a4b;
-            margin-bottom: 8px;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 3px;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
         }
 
         h1.masthead-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 72px;
-            font-weight: 900;
-            letter-spacing: -1px;
-            text-transform: uppercase;
+            font-family: 'UnifrakturMaguntia', 'Playfair Display', serif;
+            font-size: 82px;
+            font-weight: 400;
+            text-align: center;
             color: #1a1612;
-            line-height: 1;
-            margin-bottom: 15px;
+            line-height: 0.95;
+            letter-spacing: -1px;
         }
 
         /* Issue Bar / Date Line */
         .issue-bar {
             border-top: 1px solid #1a1612;
             border-bottom: 3px double #1a1612;
-            padding: 8px 15px;
+            padding: 6px 10px;
+            margin: 10px 0 30px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-family: 'Bitter', serif;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #3a3128;
-            margin-bottom: 35px;
-        }
-
-        /* Manifesto / About Section Banner */
-        .manifesto-banner {
-            border: 2px solid #1a1612;
-            background: #fdfbf7;
-            padding: 25px 40px;
-            text-align: center;
-            margin-bottom: 45px;
-            box-shadow: 4px 4px 0px #1a1612;
-        }
-
-        .manifesto-text {
-            font-family: 'Bitter', serif;
-            font-size: 21px;
-            line-height: 1.65;
-            color: #1a1612;
-            font-weight: 700;
-        }
-
-        .section-headline {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 900;
-            text-transform: uppercase;
-            border-bottom: 2px solid #1a1612;
-            padding-bottom: 6px;
-            margin-bottom: 35px;
-            letter-spacing: 1px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .section-headline span.sub {
-            font-family: 'Lora', serif;
             font-size: 12px;
-            font-style: italic;
-            text-transform: none;
-            font-weight: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Newspaper Grid Layout */
-        .newspaper-grid {
+        /* Main Grid Structure */
+        .main-newspaper-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 35px;
-            margin-bottom: 60px;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
-        /* Newspaper Column Article Cards */
-        .news-card {
-            text-decoration: none;
-            color: inherit;
+        /* Columns & Section Borders */
+        .newspaper-col {
             display: flex;
             flex-direction: column;
-            background: #fcf9f2;
-            border: 1px solid #1a1612;
-            padding: 25px;
-            box-shadow: 3px 3px 0px #1a1612;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            gap: 30px;
+        }
+
+        .newspaper-col.border-left {
+            border-left: 1px solid #1a1612;
+            padding-left: 30px;
+        }
+
+        .newspaper-col.border-right {
+            border-right: 1px solid #1a1612;
+            padding-right: 30px;
+        }
+
+        /* Publisher's Notice / Explanation Box */
+        .publisher-notice {
+            border: 2px solid #1a1612;
+            padding: 18px;
             position: relative;
+            background: rgba(0,0,0,0.015);
         }
 
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 5px 5px 0px #1a1612;
-            background: #ffffff;
+        .publisher-notice::before {
+            content: '';
+            position: absolute;
+            top: 3px; left: 3px; right: 3px; bottom: 3px;
+            border: 1px solid #1a1612;
+            pointer-events: none;
         }
 
-        .news-card.lead-story {
-            grid-column: span 1;
-            background: #fdfbf7;
+        .notice-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 900;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
 
-        .article-kicker {
+        .notice-body {
+            font-size: 13.5px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #261f18;
+        }
+
+        /* Section Headlines */
+        .section-banner {
+            border-top: 2px solid #1a1612;
+            border-bottom: 1px solid #1a1612;
+            text-align: center;
+            padding: 6px 0;
+            margin-bottom: 25px;
+        }
+
+        .section-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Interactive Article Box Styles */
+        .story-block {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 22px;
+            transition: background 0.2s ease;
+        }
+
+        .story-block:last-child {
+            border-bottom: none;
+        }
+
+        .story-block:hover h3, .story-block:hover h2 {
+            text-decoration: underline;
+        }
+
+        .story-kicker {
             font-family: 'Bitter', serif;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: #8b6e4e;
-            margin-bottom: 8px;
+            color: #594839;
+            margin-bottom: 5px;
         }
 
-        .news-card h2, .news-card h3 {
+        .story-block h2 {
             font-family: 'Playfair Display', serif;
+            font-size: 34px;
             font-weight: 900;
-            color: #1a1612;
-            line-height: 1.25;
+            line-height: 1.1;
             margin-bottom: 12px;
+            text-transform: uppercase;
         }
 
-        .news-card.lead-story h2 {
-            font-size: 32px;
-        }
-
-        .news-card h3 {
+        .story-block h3 {
+            font-family: 'Playfair Display', serif;
             font-size: 22px;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 10px;
         }
 
-        .news-card p {
-            font-size: 15px;
-            line-height: 1.65;
-            color: #382e25;
-            margin-bottom: 20px;
-            flex-grow: 1;
+        .story-text {
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #2b231b;
+            margin-bottom: 12px;
         }
 
         .dropcap::first-letter {
             font-family: 'Playfair Display', serif;
-            font-size: 42px;
+            font-size: 46px;
             float: left;
             line-height: 0.8;
-            padding-top: 4px;
-            padding-right: 8px;
-            padding-bottom: 2px;
+            padding-top: 3px;
+            padding-right: 7px;
             font-weight: 900;
-            color: #1a1612;
         }
 
-        .card-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #1a1612;
-            padding-top: 12px;
-            margin-top: auto;
-        }
-
-        .tag {
+        .story-meta {
+            font-family: 'Bitter', serif;
             font-size: 11px;
             font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 3px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid #1a1612;
+            display: flex;
+            justify-content: space-between;
+            color: #594839;
+            border-top: 1px stroke #1a1612;
+            padding-top: 6px;
         }
 
-        .tag-amber { background-color: #fef3c7; color: #92400e; }
-        .tag-red { background-color: #fee2e2; color: #991b1b; }
-        .tag-emerald { background-color: #d1fae5; color: #065f46; }
-        .tag-purple { background-color: #ede9fe; color: #5b21b6; }
-
-        .date-str {
-            font-family: 'Bitter', serif;
-            font-size: 12px;
-            color: #6b5a4b;
-            font-weight: 600;
-        }
-
-        /* Bottom Bio Section / Columnist Profile */
-        .bio-footer-section {
+        /* Bio Section at Bottom */
+        .author-section {
             border-top: 3px double #1a1612;
-            padding-top: 40px;
-            margin-top: 40px;
+            padding-top: 30px;
+            margin-top: 20px;
         }
 
-        .bio-box {
+        .bio-container {
+            border: 1px solid #1a1612;
+            padding: 25px;
             display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 40px;
-            background: #fdfbf7;
-            border: 2px solid #1a1612;
-            padding: 35px;
-            box-shadow: 4px 4px 0px #1a1612;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
             align-items: center;
         }
 
         .bio-photos {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             justify-content: center;
         }
 
-        .retro-photo {
+        .retro-frame {
             background: #ffffff;
-            padding: 8px 8px 30px 8px;
+            padding: 6px 6px 25px 6px;
             border: 1px solid #1a1612;
-            box-shadow: 2px 2px 0px #1a1612;
-            width: 140px;
+            width: 130px;
             text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 2px 2px 0px #1a1612;
         }
 
         .photo-placeholder {
             width: 100%;
-            height: 120px;
-            background-color: #e2d7c5;
+            height: 110px;
+            background-color: #d6ccbd;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6b5a4b;
-            font-size: 11px;
+            color: #594839;
+            font-size: 10px;
             font-weight: 700;
-            letter-spacing: 1px;
             text-transform: uppercase;
             border: 1px solid #1a1612;
         }
 
-        .retro-photo.photo-1 { transform: rotate(-3deg); }
-        .retro-photo.photo-2 { transform: rotate(3deg); margin-left: -15px; }
-
-        .retro-photo:hover {
-            transform: rotate(0deg) scale(1.05);
-            z-index: 2;
-        }
+        .retro-frame.p1 { transform: rotate(-3deg); }
+        .retro-frame.p2 { transform: rotate(3deg); margin-left: -15px; }
 
         .bio-details h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 30px;
+            font-size: 26px;
             font-weight: 900;
-            margin-bottom: 6px;
-            color: #1a1612;
+            text-transform: uppercase;
+            margin-bottom: 4px;
         }
 
-        .bio-details .author-title {
+        .bio-details .byline {
             font-family: 'Bitter', serif;
-            font-size: 12px;
-            letter-spacing: 2px;
+            font-size: 11px;
             text-transform: uppercase;
-            color: #8b6e4e;
+            letter-spacing: 1px;
+            color: #594839;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 6px;
         }
 
         .bio-details p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #3a3128;
-            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.65;
+            text-align: justify;
+            margin-bottom: 10px;
         }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 1200px) {
-            .newspaper-grid {
-                grid-template-columns: 1fr 1fr;
+        @media (max-width: 1100px) {
+            .main-newspaper-grid {
+                grid-template-columns: 1fr;
             }
-            .news-card.lead-story {
-                grid-column: span 2;
+            .newspaper-col.border-left, .newspaper-col.border-right {
+                border: none;
+                padding: 0;
             }
-        }
-
-        @media (max-width: 768px) {
-            body { padding: 20px 15px; }
-            h1.masthead-title { font-size: 42px; }
-            .newspaper-grid { grid-template-columns: 1fr; }
-            .news-card.lead-story { grid-column: span 1; }
-            .bio-box { grid-template-columns: 1fr; }
-            .manifesto-text { font-size: 17px; }
+            .masthead-top {
+                grid-template-columns: 1fr;
+            }
+            .ear-box { display: none; }
+            h1.masthead-title { font-size: 52px; }
+            .bio-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <div class="newspaper-wrapper">
+    <div class="newspaper-container">
         
-        <!-- Newspaper Header -->
-        <header>
-            <div class="edition-tag">The Personal Chronicles & Hermeneutic Reflections</div>
-            <h1 class="masthead-title">Journals of a Theology Student</h1>
+        <!-- Masthead -->
+        <header class="masthead-top">
+            <div class="ear-box">
+                <h4>Today's Purpose</h4>
+                <p>Authentic reflections on ministry, hermeneutics, and walking with Christ.</p>
+            </div>
+            
+            <h1 class="masthead-title">Daily Newspaper</h1>
+            
+            <div class="ear-box">
+                <h4>Location & Note</h4>
+                <p>Noblesville, IN<br>High School Ministry & Discipleship</p>
+            </div>
         </header>
 
-        <!-- Newspaper Issue Bar -->
+        <!-- Issue Bar -->
         <div class="issue-bar">
-            <span>Vol. I No. 1</span>
-            <span>Noblesville, Indiana</span>
-            <span>A Ministry & Theological Outlet</span>
-            <span>October 2026 Edition</span>
+            <span>ISSUE NO. 01</span>
+            <span>NOBLESVILLE, INDIANA</span>
+            <span>OCTOBER 2026 EDITION</span>
+            <span>VOL. I</span>
         </div>
 
-        <!-- Manifesto / About Banner -->
-        <section class="manifesto-banner">
-            <p class="manifesto-text">This project is a creative space to process my journey in ministry and theology; a deliberate step away from the pressure of perfectionism I feel in my class writings and into authenticity. I believe God made us all to create things that reflect both who we are and who He is. For me, that medium is writing. My hope is that these journals serve as a stained-glass window into my passions, honest wrestling, and story as it unfolds.</p>
-        </section>
-
-        <!-- Section Label -->
-        <div class="section-headline">
-            <span>Latest Dispatches & Reflections</span>
-            <span class="sub">Read time: 3-8 mins</span>
+        <!-- Latest Journals Section Banner -->
+        <div class="section-banner">
+            <h2>Latest Journals</h2>
         </div>
 
-        <!-- Newspaper Multi-Column Grid -->
-        <main class="newspaper-grid">
+        <!-- Main Newspaper 3-Column Layout -->
+        <main class="main-newspaper-grid">
             
-            <!-- Featured Lead Article -->
-            <a href="Masks.html" class="news-card lead-story">
-                <div class="article-kicker">Featured Reflection • Front Page</div>
-                <h2>What Would It Look Like If We All Took Off Our Masks?</h2>
-                <p class="dropcap">Everyone, whether they know it or not, wears spiritual cosmetics, some kind of mask that distorts the reality of who they are. Exploring the tension between pride and self-loathing, this reflection looks at how the Gospel frees us from fabricating false selves to protect against rejection, pain, and shame.</p>
-                <div class="card-meta">
-                    <span class="tag tag-amber">Personal Reflection</span>
-                    <span class="date-str">Oct 02, 2026</span>
+            <!-- Left Column: Publisher's Notice & Secondary Story -->
+            <div class="newspaper-col border-right">
+                
+                <!-- Publisher's Notice (Explanation of Journal) -->
+                <div class="publisher-notice">
+                    <div class="notice-header">Publisher's Note</div>
+                    <p class="notice-body dropcap">This project is a creative space to process my journey in ministry and theology; a deliberate step away from the pressure of perfectionism I feel in my class writings and into authenticity. I believe God made us all to create things that reflect both who we are and who He is. For me, that medium is writing. My hope is that these journals serve as a window into my passions and honest wrestling.</p>
                 </div>
-            </a>
 
-            <!-- Secondary Article 1 -->
-            <a href="promised-land.html" class="news-card">
-                <div class="article-kicker">Exegesis & Application</div>
-                <h3>Reflection On Israel's Refusal to Enter the Promised Land</h3>
-                <p>Exploring Israel's fearful refusal of the Promised Land, this journal reflection examines how modern believers similarly succumb to timidity and spiritual distrust when faced with God's call.</p>
-                <div class="card-meta">
-                    <span class="tag tag-red">Class Journal</span>
-                    <span class="date-str">Sep 05, 2026</span>
-                </div>
-            </a>
+                <a href="promised-land.html" class="story-block">
+                    <div class="story-kicker">Exegesis & Application</div>
+                    <h3>Reflection On Israel's Refusal to Enter Promised Land</h3>
+                    <p class="story-text">Exploring Israel's fearful refusal of the Promised Land, this journal reflection examines how modern believers similarly succumb to timidity and spiritual distrust when faced with God's clear calling.</p>
+                    <div class="story-meta">
+                        <span>Class Journal</span>
+                        <span>Sep 05, 2026</span>
+                    </div>
+                </a>
 
-            <!-- Secondary Article 2 -->
-            <a href="berlin-summer-2025.html" class="news-card">
-                <div class="article-kicker">Field Notes</div>
-                <h3>Reflections from Germany - Summer 2025</h3>
-                <p>My Reflections from my two month spiritual retreat in Germany, processing culture, quietude, and global discipleship.</p>
-                <div class="card-meta">
-                    <span class="tag tag-emerald">Travel Journal</span>
-                    <span class="date-str">Aug 28, 2026</span>
-                </div>
-            </a>
+            </div>
+
+            <!-- Center Column: Lead Featured Story -->
+            <div class="newspaper-col">
+                <a href="Masks.html" class="story-block">
+                    <div class="story-kicker">Lead Article • Special Feature</div>
+                    <h2>What Would It Look Like If We All Took Off Our Masks?</h2>
+                    <p class="story-text dropcap">Everyone, whether they know it or not, wears spiritual cosmetics—some kind of mask that distorts the reality of who they are. Exploring the deep tension between pride and self-loathing, this reflection looks at how the Gospel frees us from fabricating false selves to protect against rejection, pain, and shame in our daily walks.</p>
+                    <div class="story-meta">
+                        <span>Personal Reflection</span>
+                        <span>Oct 02, 2026</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Right Column: Additional Stories -->
+            <div class="newspaper-col border-left">
+                
+                <a href="berlin-summer-2025.html" class="story-block">
+                    <div class="story-kicker">Field Dispatches</div>
+                    <h3>Reflections from Germany - Summer 2025</h3>
+                    <p class="story-text">My reflections from a two-month spiritual retreat in Germany, processing culture, quietude, global discipleship, and cross-cultural ministry.</p>
+                    <div class="story-meta">
+                        <span>Travel Journal</span>
+                        <span>Aug 28, 2026</span>
+                    </div>
+                </a>
+
+                <a href="#" class="story-block">
+                    <div class="story-kicker">Hermeneutics</div>
+                    <h3>Epistemological Humility in Contemporary Frameworks</h3>
+                    <p class="story-text">Navigating objectivism and extreme skepticism to construct a steady, grounded approach to classic textual hermeneutics today.</p>
+                    <div class="story-meta">
+                        <span>Theology</span>
+                        <span>Jul 30, 2026</span>
+                    </div>
+                </a>
+
+            </div>
 
         </main>
 
-        <!-- Bio Section (Bottom of Page) -->
-        <section class="bio-footer-section">
-            <div class="section-headline">
-                <span>About the Author & Columnist</span>
-                <span class="sub">Behind the Pen</span>
-            </div>
-
-            <div class="bio-box">
+        <!-- Bottom Bio Section -->
+        <section class="author-section">
+            <div class="bio-container">
                 <div class="bio-photos">
-                    <div class="retro-photo photo-1">
+                    <div class="retro-frame p1">
                         <div class="photo-placeholder">[ Photo 1 ]</div>
                     </div>
-                    <div class="retro-photo photo-2">
+                    <div class="retro-frame p2">
                         <div class="photo-placeholder">[ Photo 2 ]</div>
                     </div>
                 </div>
                 <div class="bio-details">
                     <h3>Daniel Jeschke</h3>
-                    <div class="author-title">Ministry Student • High School Ministry at Heartland • Aspiring Missionary</div>
-                    <p>Hey there! I’m Daniel. I serve in high school ministry at Heartland Church, walking alongside students as they discover who Jesus is and who He’s shaping them to be.</p>
+                    <div class="byline">Ministry Student • High School Ministry at Heartland • Aspiring Missionary</div>
+                    <p>Hey there! I’m Daniel. I serve in high school ministry at Heartland Church[cite: 1], walking alongside students as they discover who Jesus is and who He’s shaping them to be.</p>
                     <p>At my core, I have a deep love for serving others, diving into God's Word, and exploring the richness of theology. As an aspiring missionary, I’m eager to see where God leads this passion for ministry—whether near or far.</p>
                 </div>
             </div>
