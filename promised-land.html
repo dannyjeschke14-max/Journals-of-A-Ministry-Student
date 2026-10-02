@@ -3,215 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflections from Germany — Journals of a Ministry Student</title>
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Bitter:wght@600;700&display=swap" rel="stylesheet">
+    <title>Reflection On Israel's Refusal to Enter the Promised Land — Journals of a Ministry Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-primary: #faf7f2;
+            --bg-secondary: #ffffff;
+            --text-primary: #2a2a2a;
+            --text-secondary: #5a5246;
+            --text-muted: #8b7d6b;
+            --accent: #c9a87d;
+            --border: #e6dfd5;
+            --tag-bg: #fef3c7;
+            --tag-text: #92400e;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #121212;
+                --bg-secondary: #1e1e1e;
+                --text-primary: #e0e0e0;
+                --text-secondary: #a0a0a0;
+                --text-muted: #808080;
+                --accent: #c9a87d;
+                --border: #2d2d2d;
+                --tag-bg: #372f1f;
+                --tag-text: #fcd34d;
+                --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            background-color: #e6dfd3;
-            background-image: radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
+            background-color: var(--bg-primary);
             font-family: 'Lora', serif;
-            color: #1a1612;
-            padding: 30px 40px;
+            color: var(--text-primary);
+            padding: 60px 20px;
             min-height: 100vh;
-        }
-        
-        .newspaper-container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            border: 1px solid #1a1612;
-            padding: 30px 45px;
-            background: transparent;
+            line-height: 1.8;
+            transition: var(--transition);
         }
 
-        /* Top Navigation */
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+        }
+
         .back-nav {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #1a1612;
-            padding-bottom: 10px;
+            margin-bottom: 40px;
         }
 
         .back-nav a {
-            font-family: 'Bitter', serif;
-            font-size: 11px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             text-decoration: none;
-            color: #594839;
-            font-weight: 700;
-            transition: color 0.2s ease;
+            color: var(--text-muted);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
         }
 
         .back-nav a:hover {
-            color: #1a1612;
+            color: var(--text-primary);
+            transform: translateX(-4px);
         }
-        
-        /* Masthead / Article Header */
-        header.article-header {
-            text-align: center;
-            border-bottom: 2px solid #1a1612;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+
+        header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 40px;
         }
 
         .project-title {
-            font-family: 'Bitter', serif;
-            font-size: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #594839;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        h1.headline {
-            font-family: 'Playfair Display', serif;
-            font-size: 46px;
-            font-weight: 900;
-            color: #1a1612;
-            line-height: 1.15;
-            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
             margin-bottom: 15px;
         }
-        
-        /* Issue Bar / Date Line */
-        .issue-bar {
-            border-top: 1px solid #1a1612;
-            border-bottom: 3px double #1a1612;
-            padding: 6px 10px;
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        h1 {
             font-family: 'Bitter', serif;
-            font-size: 11px;
+            font-size: 40px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #594839;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+            color: var(--text-primary);
         }
 
-        /* Opening Intro Paragraph */
-        .opening-question {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-style: italic;
-            text-align: center;
-            margin-bottom: 25px;
-            color: #1a1612;
-            padding: 0 20px;
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: var(--text-muted);
         }
 
-        /* Article Body Newspaper Layout */
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+        }
+
         .article-body {
-            column-count: 2;
-            column-gap: 40px;
-            column-rule: 1px solid #1a1612;
-            font-size: 15px;
-            line-height: 1.7;
-            text-align: justify;
-            color: #2b231b;
+            font-size: 18px;
+        }
+
+        .article-body h2 {
+            font-family: 'Bitter', serif;
+            font-size: 26px;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
         }
 
         .article-body p {
-            margin-bottom: 18px;
-            text-indent: 18px;
+            margin-bottom: 24px;
+            color: var(--text-secondary);
         }
 
-        .article-body p.no-indent {
-            text-indent: 0;
-        }
-
-        .dropcap::first-letter {
-            font-family: 'Playfair Display', serif;
-            font-size: 52px;
-            float: left;
-            line-height: 0.8;
-            padding-top: 4px;
-            padding-right: 8px;
-            font-weight: 900;
-        }
-
-        /* Section Headings inside columns */
-        .article-body h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            color: #1a1612;
-            border-top: 1px solid #1a1612;
-            border-bottom: 1px solid #1a1612;
-            padding: 4px 0;
-            text-align: center;
-            break-inside: avoid;
-        }
-
-        /* Lists formatting inside multi-column */
-        .article-body ul {
-            margin-bottom: 18px;
-            padding-left: 20px;
-        }
-
-        .article-body li {
-            margin-bottom: 8px;
-            text-indent: 0;
-        }
-
-        /* Links Styling */
-        .article-body a {
-            color: #594839;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        .article-body a:hover {
-            color: #1a1612;
-        }
-
-        /* Pull-Quote Styling */
         .article-body blockquote {
-            column-span: all;
-            border-top: 2px solid #1a1612;
-            border-bottom: 2px solid #1a1612;
-            padding: 18px 25px;
-            margin: 25px 0;
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            border-left: 3px solid var(--accent);
+            padding: 10px 0 10px 24px;
+            margin: 36px 0;
             font-style: italic;
-            line-height: 1.4;
-            text-align: center;
-            color: #1a1612;
-            background: rgba(0,0,0,0.015);
+            color: var(--text-primary);
+            font-size: 19px;
+            background: linear-gradient(90deg, rgba(201, 168, 125, 0.05) 0%, transparent 100%);
+            border-radius: 0 8px 8px 0;
         }
 
         .article-body blockquote sup {
             font-style: normal;
-            font-size: 14px;
         }
 
-        /* Footnotes / Bibliography */
-        .footnotes {
-            margin-top: 40px;
-            padding-top: 15px;
-            border-top: 3px double #1a1612;
+        sup {
             font-size: 12px;
-            color: #594839;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .footnotes {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: var(--text-muted);
         }
 
         .footnotes h3 {
-            font-family: 'Bitter', serif;
-            font-size: 13px;
-            margin-bottom: 8px;
-            color: #1a1612;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
             letter-spacing: 1.5px;
             text-transform: uppercase;
             font-weight: 700;
@@ -219,150 +186,73 @@
 
         .footnotes ol {
             padding-left: 20px;
+            line-height: 1.6;
         }
 
         .footnotes li {
-            margin-bottom: 4px;
+            margin-bottom: 10px;
         }
 
-        @media (max-width: 850px) {
-            .article-body {
-                column-count: 1;
-                column-rule: none;
-            }
-            h1.headline {
-                font-size: 32px;
-            }
-            .newspaper-container {
-                padding: 20px;
-            }
+        .footnotes li::marker {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
             body {
-                padding: 15px;
+                padding: 30px 18px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .article-body {
+                font-size: 17px;
+            }
+
+            .article-body blockquote {
+                font-size: 18px;
+                padding-left: 18px;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="newspaper-container">
-        
-        <!-- Navigation -->
+    <div class="container">
         <nav class="back-nav">
-            <a href="index.html">&larr; Back to Main Edition</a>
+            <a href="index.html">&larr; Back to all journals</a>
         </nav>
 
-        <!-- Article Masthead -->
-        <header class="article-header">
+        <header>
             <div class="project-title">Journals of a Ministry Student</div>
-            <h1 class="headline">Reflections from Germany — June / July 2025</h1>
+            <h1>Reflection On Israel's Refusal to Enter the Promised Land</h1>
+            <div class="article-meta">
+                <span class="tag">Old Testament</span>
+                <span>•</span>
+                <span class="date">Sep 05, 2026</span>
+            </div>
         </header>
-
-        <!-- Issue / Meta Bar -->
-        <div class="issue-bar">
-            <span>CATEGORY: TRAVEL JOURNAL</span>
-            <span>PUBLISHED: JUL 29, 2025</span>
-        </div>
-
-        <!-- Lead Quote / Subtitle -->
-        <div class="opening-question">
-            “Jesus began His ministry by spending forty days in the wilderness. I spent forty-nine days in Berlin.”
-        </div>
-
-        <!-- Newspaper Article Body -->
+        
         <main class="article-body">
+            <p>How does Israel's refusal to enter the Promised Land affect their future? Do we make similar life-changing decisions today?</p>
+            
+            <blockquote>“Then Joshua the son of Nun and Caleb the son of Jephunneh… said to all the congregation of the people of Israel… ‘Their protection is removed from them, and the Lord is with us; do not fear them.’ Then all the congregation said to stone them with stones.”<sup>1</sup></blockquote>
 
-            <blockquote>
-                “And when Jesus was baptized, immediately he went up from the water, and behold, the heavens were opened to him, and he saw the Spirit of God descending like a dove and coming to rest on him; and behold, a voice from heaven said, ‘This is my beloved Son, with whom I am well pleased.’<br><br>
-                Then Jesus was led up by the Spirit into the wilderness to be tempted by the devil. And after fasting forty days and forty nights.” — Matthew 3:16–4:2
-            </blockquote>
-
-            <p class="no-indent dropcap">Originally, I planned to spend this summer doing missionary work. But a mentor of mine, who will be a full-time missionary this fall, offered another idea over coffee. He asked me a question that shifted everything: <em>What if you devoted the summer to ministering to the Lord?</em> He reminded me that our first ministry is always to the Lord<sup>1</sup>, and that Christ spent forty days in the wilderness before He began His ministry. The more I prayed about it, the more peace I found with the idea of going — not to work for God, but simply to be with Him. So, I decided to spend my summer in Berlin deeply pursuing God to prepare to spend the rest of my life in ministry.</p>
+            <p>The people of Israel have been instructed to enter the promised land which they have just received word that it is as fruitful and abundant as God promised it would be. God promised a land flowing with milk and honey and that’s exactly what he delivered and that’s what the spies reported was in the promised land. Yet, fear overtook the Israelites and kept them from following the command of God to enter into the promised land because the armies which resided in the promised land were greater than Israel's. This decision revealed Israel's hardness of heart. In a narrative similar to Exodus 32, God sets his sights on destroying the people of Israel and starting a new nation from Moses, but Moses intercedes on behalf of the people and the Lord relents.</p>
             
-            <p>I came with a few goals: find deeper intimacy with God, explore who God made me to be, and meet and learn from German missionaries. On this trip, I achieved all of that—and far more. If I were to write everything God did and said during this season, this newsletter would never end. But, I’ll summarize and share the most impactful parts.</p>
-
-            <h2>Meeting Jill and Joe</h2>
-            <p class="no-indent">One of the most meaningful parts of the summer was visiting Jill and Joe Vincent, missionaries to a NATO Air Force base in western Germany. I only stayed with them three days, but by the end they were family. Their warmth and hospitality left a deep impression on me.</p>
+            <p>This marks a turning point for Israel, and he leads the congregation into the wilderness, which biblically symbolizes a place of formation, to spend the next forty years forming the people of Israel into a faithful people. We see this formation begin in Chapter 15 directly after Israel's defiance of God and their futile attempt to clean up their mess on their own apart from God. God reminds the Israelites of the systems designed to keep them from turning away from Him once they enter the promised land which is a system of Mercy and Grace at the cost of the humility to admit their sinfulness and offer a sacrifice.</p>
             
-            <p>Their ministry was simple yet powerful: they shared the gospel and their lives with the military community. All day long, their home was a revolving door of people as Jill and Joe welcomed, pastored, and loved every single person often through a meal or cup of coffee.</p>
-            
-            <p>Thursday night was Hangar Night, their weekly gathering of more than 100 people. It was an amazing night of great food, worship, and a word on the power of our testimonies. The community was so beautiful; it was clear that the Spirit of God was present. I heard many stories of how God was using their ministry to change people’s lives.</p>
-            
-            <p>Jill and Joe are by far the most hospitable people I have ever met, and the love of Christ is so palpable in their hospitality. They taught me the power of sharing your life with others, and gave me a deeper understanding of Christ’s character. I’m very grateful for their hospitality and love. Their example will influence me and my future ministry profoundly.</p>
-
-            <p>This summer I also found a deeper understanding of the importance of Christian fellowship. Over the last year, God has blessed me with an incredible community of brothers and sisters. We gathered almost every week to share a meal, fellowship, and seek God together in worship and His word. Many who were strangers a year ago are now my dearest friends. While just a few years ago I had only a handful of deep relationships, this last year God made me the richest person in the world — blessing me with a multitude of deep, impactful relationships.</p>
-            
-            <p>Taking seven weeks away from this community has brought me so much gratitude for what God has given me at Heartland. The hardest part about this summer was the distance from these relationships. But, the pain wasn’t wasted, the distance has only served to create a greater appreciation and love for these brothers and sisters.</p>
-
-            <h2>Diving into His Word in Tiergarten</h2>
-            <p class="no-indent">I intentionally planned for a plethora of free time to dive deep into the Word of God and it proves true that the more you eat, the hungrier you become. Lately I’ve been feasting on His word and I can’t get enough!</p>
-            
-            <p>One of the things God spoke to me was what it means to bear my cross and follow Him (Luke 9:23). In reading the Gospels it’s clear that Christ didn’t live for Himself. He had all the power to come off of the cross and avoid the pain but rather He chose to suffer. He gave up heaven, He lived humbly, He was abused, He was mocked, and He bore the sins of the world on the cross, not for Himself — He did it for his beloved (us) (Philippians 2:6-8). And He calls us to do likewise, to carry our cross daily. It’s easy to get caught up in what’s fair and what’s right. It’s easy to get distracted by pleasures and abundance, but Christ calls His followers not to stop at fair, but to yield our rights for our brother’s good just like He did for us (1 John 3:17-18, Philippians 2:4, Romans 12:10).</p>
-            
-            <p>Was it fair that Christ bore our sins so that we could live in His eternal life? Then why am I so concerned with what’s fair for myself?</p>
-            
-            <p>In 1 Corinthians 6:7 Paul rebukes the Corinthians for bringing lawsuits against one another. Paul writes “Why not rather suffer wrong?” If I truly believe the gospel, I should rejoice when I am wronged. Who am I to demand “my rights” or “my possessions” from my brother? If we as a church believe “The greatest among you shall be your servant.” (Matthew 23:11), why aren’t we competing to give everything away to one another?</p>
-            
-            <p>Why would I throw away heavenly treasure by withholding earthly riches from my brother? Are Christians known for loving their neighbors? Are we known as servants? Do I put my pleasure and comfort above my brother’s well-being?</p>
-
-            <blockquote>
-                This was my song for the summer:<br>
-                <a href="https://www.youtube.com/watch?v=F3aJ1418e9g" target="_blank">139 — Kings Kaleidoscope</a>
-            </blockquote>
-
-            <p>Seeking a deeper sense of who God made me to be, I sought answers in His word. He revealed to me that all mankind was made to bear His image (Genesis 1:27). And while it’s such a basic principle, I found a deeper understanding meditating on His word, that bearing His image means living with His character. As I’ve dwelt in the Scriptures I’ve grown more familiar with God’s peace, love, patience, perfection, and compassion.</p>
-            
-            <p>As I found this deeper understanding of His character, I also saw more clearly how far off the mark I truly am (Romans 3:23). And, the more clearly I saw the gap between my character and His, the more grace I found in Him.</p>
-            
-            <p>As this deeper revelation of His grace took root, I began to understand more fully what it means that it is no longer I who live, but Christ who lives in me (Galatians 2:20). It means that though I don’t measure up, His righteousness can now be my righteousness, His peace; victory; perfection — all can be mine through faith in the cross.</p>
-            
-            <p>It’s basic Christianity that Christ swapped places with me. He bore my brokenness on the cross and freely offers me perfection if I would have the humility and faith to accept it. This summer, it’s become more real and tangible in my life than ever.</p>
-            
-            <p>With this revelation, I’ve found so much more power in the Holy Spirit — which is Christ living in me. It’s no longer just what Dallas Willard calls “the gospel of sin management” in <em>The Divine Conspiracy</em> — I’ve found the gospel of the Kingdom Jesus proclaimed: Where heaven comes to earth in my life, shaping every aspect of how I live and who I’m becoming. As Jesus said, “The kingdom of God is in your midst” (Luke 17:21), and this summer I’ve taken great steps learning to live like that’s true. Learning how to bear the image of Christ, by the power of His Holy Spirit.</p>
-
-            <p>My 49 days in my wilderness — Berlin, Germany — were full of joys and sorrows, intimacy with God and distance, courage and fear, peace and anxiety, good food, some new friends, and adventure. God used every moment to form me more into the Man of God that He created me to be.</p>
-            
-            <p>My mentor Nito was right, my first ministry always has to be to the Lord. In the intimacy with God this summer, I learned so much. Not head knowledge so I can get the answers right on a test — I had plenty of that already. God taught me things I was only able to learn by accepting His invitation — “Follow me” (Mark 1:17). Jesus never asked me to be His employee, working for Him in exchange for eternal life. Rather He invited me to be His apprentice/disciple. His invitation is to follow Him, to be with him and to learn from Him as He patiently instructs my heart, forming me into His image.</p>
-
-            <p>This summer was an incredible time of seeking God! I spent the vast majority of my time in Berlin, but I also got to travel to Munich, Oberammergau, Cologne, Wismar, and Potsdam. I met many great people, ate a lot of great food, but by far the best part was the time with my heavenly Father.</p>
-
-            <h2>Gratitude & Looking Forward</h2>
-            <ul class="no-indent">
-                <li><strong>Zoe and Shawn’s hospitality</strong> in hosting me most of the summer.</li>
-                <li><strong>Jill and Joe’s hospitality</strong> for the three days I spent with them.</li>
-                <li><strong>The amazing people</strong> I met along the way!</li>
-                <li><strong>The financial ability</strong> to take this trip and those who helped me get here.</li>
-                <li><strong>My many brothers and sisters in Christ</strong> that I am returning home to.</li>
-            </ul>
-
-            <p>I’m looking forward to returning in August to apply all my growth into my daily life as I step into the many exciting things God has prepared for me:</p>
-            
-            <ul>
-                <li><strong>21 Days of Prayer</strong> starts August 3rd, where my church will gather daily at 6 am to pray. It’s always a time of spiritual growth, miraculous works of God, and great joy gathering in fellowship everyday. I cannot wait to see the incredible ways God will move as we seek him together.</li>
-                <li><strong>Classes at Heartland college</strong> start on the 26th, and I am beyond excited to be full time! I’m expecting God to do great things through these next few years at HC.</li>
-                <li><strong>Catching up with friends & mentors</strong> to share all the many stories and works of God from this summer.</li>
-                <li><strong>Beginning to serve</strong> as a Young Life leader!</li>
-            </ul>
-
-            <h2>Prayer Requests</h2>
-            <ul>
-                <li><strong>Guidance</strong> as I reengage with church/serving to find a rhythm of work and rest that glorifies God.</li>
-                <li><strong>For Tim and Lori Hawkins</strong> to reach the necessary funding to attend the next training session as they continue their journey towards being church planters in Berlin.</li>
-                <li><strong>For a great start to the school year</strong>, that my learning would lead me to deeper intimacy with Christ rather than puff me up as knowledge tends to do.</li>
-            </ul>
-
-            <p>I started this little newsletter to share updates with those who wish to follow along on the journey that God is taking me on. I plan to make one every month but, <em>“A man’s heart plans his way, but the Lord directs his steps.”</em> I appreciate you taking time to read, pray, and invest in my life in whatever way you do so. Thank you! <em>“My love be with you all in Christ Jesus.”</em></p>
-
+            <p>Our Textbook summarized the report of the spies by saying, “Life there would be preferable to living in the desert.”<sup>2</sup> Yet, their fear convinces the congregation that God doesn’t have their best interest at heart and he has just brought them there to die. It’s easy to look at the Israelites and think, “how foolish of them not to listen to God.” But the reality is we do this almost daily. God gives us direction, commands, and callings and yet, timidity and fear keep us from stepping into them. There’s moments when it’s clear that following God’s way is so much better than our current situation like the promised land was for the Israelites. But because of fear, we choose to go our own way and sit in harder times. All of it stems from the same temptation from the garden. The tempter tells us that God can’t be trusted and he doesn’t have our own best interest in mind. The temptation is then to usurp the position of God and become Lord of our life, doing as we please. And it’s there that we find ourselves dying in the desert rather than living peacefully with God in the promised land.</p>
         </main>
 
-        <!-- Footnotes -->
         <footer class="footnotes">
-            <h3>Footnotes & Bibliography</h3>
+            <h3>Bibliography</h3>
             <ol>
-                <li>If you’re not familiar with the phrase “ministry to the Lord”, it’s basically devotion to the person of God. It’s intentionally taking time to "Love the Lord your God with all your heart and with all your soul and with all your strength." (Deuteronomy 6:5).</li>
+                <li>English Standard Version Bible.</li>
+                <li>Paul R. House and Eric Mitchell, <em>Old Testament Survey</em>, 3rd ed. (Nashville: B&H Academic, 2023), 102.</li>
             </ol>
         </footer>
-
     </div>
-
 </body>
 </html>
