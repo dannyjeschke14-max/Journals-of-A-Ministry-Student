@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Giver of Life as My Source — Journals of a Ministry Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Bitter:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #e6dfd3;
+            background-image: radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
+            font-family: 'Lora', serif;
+            color: #1a1612;
+            padding: 30px 40px;
+            min-height: 100vh;
+        }
+        
+        .newspaper-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid #1a1612;
+            padding: 30px 45px;
+            background: transparent;
+        }
+
+        /* Top Navigation */
+        .back-nav {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 10px;
+        }
+
+        .back-nav a {
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #594839;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .back-nav a:hover {
+            color: #1a1612;
+        }
+        
+        /* Masthead / Article Header */
+        header.article-header {
+            text-align: center;
+            border-bottom: 2px solid #1a1612;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-family: 'Bitter', serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #594839;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        h1.headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            font-weight: 900;
+            color: #1a1612;
+            line-height: 1.15;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        /* Issue Bar / Date Line */
+        .issue-bar {
+            border-top: 1px solid #1a1612;
+            border-bottom: 3px double #1a1612;
+            padding: 6px 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #594839;
+        }
+
+        /* Article Body Newspaper Layout */
+        .article-body {
+            column-count: 2;
+            column-gap: 40px;
+            column-rule: 1px solid #1a1612;
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+            color: #2b231b;
+        }
+
+        .article-body p {
+            margin-bottom: 18px;
+            text-indent: 18px;
+        }
+
+        .article-body p.no-indent {
+            text-indent: 0;
+        }
+
+        .dropcap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            float: left;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 8px;
+            font-weight: 900;
+        }
+
+        /* Pull-Quote Styling */
+        .article-body blockquote {
+            column-span: all;
+            border-top: 2px solid #1a1612;
+            border-bottom: 2px solid #1a1612;
+            padding: 18px 25px;
+            margin: 25px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.35;
+            text-align: center;
+            color: #1a1612;
+            background: rgba(0,0,0,0.015);
+        }
+
+        .article-body blockquote sup {
+            font-style: normal;
+            font-size: 14px;
+        }
+
+        /* Bibliography / Footnotes */
+        .footnotes {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 3px double #1a1612;
+            font-size: 12px;
+            color: #594839;
+        }
+
+        .footnotes h3 {
+            font-family: 'Bitter', serif;
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #1a1612;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .footnotes ol {
+            padding-left: 20px;
+        }
+
+        .footnotes li {
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 850px) {
+            .article-body {
+                column-count: 1;
+                column-rule: none;
+            }
+            h1.headline {
+                font-size: 32px;
+            }
+            .newspaper-container {
+                padding: 20px;
+            }
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="newspaper-container">
+        
+        <!-- Navigation -->
+        <nav class="back-nav">
+            <a href="index.html">&larr; Back to Main Edition</a>
+        </nav>
+
+        <!-- Article Masthead -->
+        <header class="article-header">
+            <div class="project-title">Journals of a Ministry Student</div>
+            <h1 class="headline">When Rest Becomes Our Source</h1>
+        </header>
+
+        <!-- Issue / Meta Bar -->
+        <div class="issue-bar">
+            <span>CATEGORY: PERSONAL REFLECTION</span>
+            <span>PUBLISHED: OCT 06, 2026</span>
+        </div>
+
+        <!-- Newspaper Article Body -->
+        <main class="article-body">
+
+            <blockquote>“Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect.”<sup>1</sup></blockquote>
+
+            <p class="no-indent dropcap">This week, God’s been renewing my mind. And, yes, while He’s probably always doing this, this week He’s given me a front-row seat to the mindset shift He’s taking me on.</p>
+
+            <p>There’s a deceptive pattern of the world which often disguises itself as the way of Jesus when it’s really forming us to trust in ourselves rather than God. It’s turning rest into our primary source of life and peace rather than trusting in God.</p>
+
+            <p>Now, before I say anything else, I’m not opposed to rest. I believe rest is crucial to discipleship to Jesus, I practice a weekly Sabbath, and I get 8 hours of sleep every night. That being said, rest, like all things, is a balance. A healthy tension found between overwork and laziness. There’s such a thing as too much rest, and there’s definitely too little rest, and I believe Jesus wants us in that sweet spot in the middle.</p>
+
+            <p>I think in church, the world gets slammed for forming us to rest too little because, after all, we live in a culture that’s addicted to work and will rest when it’s dead. But I think if we’re not careful, in all of our condemning of busyness, we can find ourselves in a mindset where we turn to a restful and balanced schedule to be our source.</p>
+
+            <p>This is where I found myself at the start of this school semester. During the summer, I was working 20 hours at the church a week, and that was all I was responsible for. I had a plethora of time for rest, for time in quiet with Jesus, and to do things that helped me stay healthy, like spending time in community.</p>
+
+            <p>This semester, though, is much busier. I’m taking four classes, working about 15 hours in my residency a week, and working 16 hours at a coffee shop. Clearly, this season of life does not have an abundance of rest like the last season. Starting the semester, I still made sure to prioritize my Sabbath weekly on Fridays, but other than that, my days were jam-packed with school, work, residency, and the few social activities I could cram in. And I found myself getting exhausted and burnt out.</p>
+
+            <p>I had been exhausting myself by focusing on the ways my schedule wasn’t perfectly balanced and the little ways I would push myself to work more than I rested. I realized I had been trusting in a balanced and restful schedule rather than the Giver of life, my source.</p>
+
+            <p>That is, until about a week ago. God started to change the way I think; He started to renew my mind.</p>
+
+            <p>It started with a memory of how life used to be. Back in high school, when I first started diving into ministry and serving at every opportunity I could in my church, I had this pure, naive, and a bit childlike passion that drove me. It was a mindset that primarily said, “God will give me the strength that I need to get everything done.” Not only that, but it said, “There’s nothing more fulfilling or meaningful you could spend your time on than ministry.” This mindset saw things like school and work not as barriers to ministry, but as steps and environments that allowed me to do ministry.</p>
+
+            <p>About a week ago, I was reminded of this mindset, the feeling of reliance on God as my source rather than myself.</p>
+
+            <p>Shifting from relying on my healthy, balanced schedule to be my source to relying on God as my source has deeply changed everything. I find myself waking up with more energy, being happier even on super busy days, and even finding myself with more free time.</p>
+
+            <p>You see, when I was so focused on the rest that I didn’t have, I was convincing myself that I was exhausted. I’d come home from work and go straight to take a nap. In the mornings, I’d sleep in to try and “catch up on the rest I’m missing.” Focusing on the rest I wasn’t getting was just making me more and more exhausted every day. But this mindset shift has been bringing me so much peace, joy, and energy. Rather than focusing on what I’m missing, I’m focused on how God is my source and He will provide all the energy I need. Now, to be clear, I still get 8 hours of sleep and Sabbath once a week. But I’m not focused on the rest I’m not getting; rather, I’m focused on God, my source.</p>
+
+            <p>This mindset shift has done wonders for me this past week. I feel more alive, more grateful, and more connected to God. I feel energized and reinvigorated to serve others in ministry. I’ve even begun to experience some of the joy and passion which I first had when I went all-in on ministry; a feeling I haven’t felt in a long time. While the world wants to form me to tell me I am my own source, God is reforming me to abide in Him to be my source.</p>
+
+            <blockquote>“I am the vine; you are the branches. Whoever abides in me and I in him, he it is that bears much fruit, for apart from me you can do nothing.”<sup>2</sup></blockquote>
+
+        </main>
+
+        <!-- Bibliography -->
+        <footer class="footnotes">
+            <h3>Scripture References</h3>
+            <ol>
+                <li>Romans 12:2 (ESV)</li>
+                <li>John 15:5 (ESV)</li>
+            </ol>
+        </footer>
+
+    </div>
+
+</body>
+</html>
