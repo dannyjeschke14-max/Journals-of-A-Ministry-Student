@@ -151,4 +151,267 @@
         .story-card:hover {
             background: #fdfbf7;
             transform: translateY(-3px);
-            box
+            box-shadow: 4px 4px 0px #1a1612;
+        }
+
+        .story-kicker {
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #594839;
+            margin-bottom: 6px;
+        }
+
+        .story-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .story-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+
+        .story-text {
+            font-size: 14.5px;
+            line-height: 1.65;
+            text-align: justify;
+            color: #2b231b;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .dropcap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            float: left;
+            line-height: 0.8;
+            padding-top: 3px;
+            padding-right: 7px;
+            font-weight: 900;
+        }
+
+        .story-meta {
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            color: #594839;
+            border-top: 1px solid #1a1612;
+            padding-top: 8px;
+            margin-top: auto;
+        }
+
+        /* Bottom Bio Section */
+        .author-section {
+            border-top: 3px double #1a1612;
+            padding-top: 30px;
+            margin-top: 20px;
+        }
+
+        .bio-container {
+            border: 1px solid #1a1612;
+            padding: 25px;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .bio-photos {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .retro-frame {
+            background: #fdfbf7;
+            padding: 8px 8px 28px 8px;
+            border: 1px solid #1a1612;
+            width: 145px;
+            text-align: center;
+            box-shadow: 3px 3px 0px #1a1612;
+            transition: transform 0.2s ease;
+        }
+
+        .retro-frame:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            z-index: 5;
+        }
+
+        /* Vintage Newspaper Photo Styling */
+        .vintage-photo {
+            width: 100%;
+            height: 135px;
+            object-fit: cover;
+            object-position: center;
+            border: 1px solid #1a1612;
+            filter: sepia(0.42) contrast(1.12) brightness(0.93) grayscale(0.2);
+        }
+
+        .retro-frame.p1 { transform: rotate(0deg); }
+        .retro-frame.p2 { transform: rotate(0deg); margin-left: -12px; }
+
+        .bio-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .bio-details .byline {
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #594839;
+            font-weight: 700;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 6px;
+        }
+
+        .bio-details p {
+            font-size: 14px;
+            line-height: 1.65;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 1100px) {
+            .main-newspaper-grid {
+                grid-template-columns: 1fr;
+            }
+            .newspaper-col.border-right {
+                border-right: none;
+                padding-right: 0;
+            }
+            h1.masthead-title { font-size: 48px; }
+            .bio-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="newspaper-container">
+        
+        <!-- Header / Masthead -->
+        <header class="masthead-top">
+            <h1 class="masthead-title">Journals of a Ministry Student</h1>
+        </header>
+
+        <!-- Issue Bar -->
+        <div class="issue-bar">
+            <span>ISSUE NO. 01</span>
+            <span>NOBLESVILLE, INDIANA</span>
+            <span>OCTOBER 2026 EDITION</span>
+            <span>VOL. I</span>
+        </div>
+
+        <!-- Latest Journals Section Banner -->
+        <div class="section-banner">
+            <h2>Latest Journals</h2>
+        </div>
+
+        <!-- Newspaper Grid -->
+        <main class="main-newspaper-grid">
+            
+            <!-- Left Column: Lead Story & Germany Reflection -->
+            <div class="newspaper-col border-right">
+                
+                <!-- Lead Story Card -->
+                <a href="Masks.html" class="story-card">
+                    <div class="story-kicker">Lead Article • Special Feature</div>
+                    <h2>What Would It Look Like If We All Took Off Our Masks?</h2>
+                    <p class="story-text dropcap">Everyone, whether they know it or not, wears spiritual cosmetics—some kind of mask that distorts the reality of who they are. Exploring the deep tension between pride and self-loathing, this reflection looks at how the Gospel frees us from fabricating false selves to protect against rejection, pain, and shame in our daily walks.</p>
+                    <div class="story-meta">
+                        <span>Personal Reflection</span>
+                        <span>Oct 02, 2026</span>
+                    </div>
+                </a>
+
+                <!-- Germany Travel Journal Card -->
+                <a href="berlin-summer-2025.html" class="story-card">
+                    <div class="story-kicker">Field Dispatches</div>
+                    <h3>Reflections from Germany - Summer 2025</h3>
+                    <p class="story-text">My reflections from a two-month spiritual retreat in Germany, processing culture, quietude, global discipleship, and cross-cultural ministry.</p>
+                    <div class="story-meta">
+                        <span>Travel Journal</span>
+                        <span>Aug 28, 2026</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Right Column: Publisher's Note, Israel Story, & Mindset Entry -->
+            <div class="newspaper-col">
+                
+                <!-- Publisher's Notice -->
+                <div class="publisher-notice">
+                    <div class="notice-header">Publisher's Note</div>
+                    <p class="notice-body dropcap">This project is a creative space to process my journey in ministry and theology; a deliberate step away from the pressure of perfectionism I feel in my class writings and into authenticity. I believe God made us all to create things that reflect both who we are and who He is. For me, that medium is writing. My hope is that these journals serve as a window into my passions and honest wrestling.</p>
+                </div>
+
+                <!-- Promised Land Class Journal Card -->
+                <a href="promised-land.html" class="story-card">
+                    <div class="story-kicker">Exegesis & Application</div>
+                    <h3>Reflection On Israel's Refusal to Enter Promised Land</h3>
+                    <p class="story-text">Exploring Israel's fearful refusal of the Promised Land, this journal reflection examines how modern believers similarly succumb to timidity and spiritual distrust when faced with God's clear calling.</p>
+                    <div class="story-meta">
+                        <span>Class Journal</span>
+                        <span>Sep 05, 2026</span>
+                    </div>
+                </a>
+
+                <!-- Mindset Journal Card -->
+                <a href="Mindset.html" class="story-card">
+                    <div class="story-kicker">Spiritual Formation</div>
+                    <h3>Renewing the Mind: Reflections on Mindset</h3>
+                    <p class="story-text">An exploration of how personal mindset, perspective, and daily mental focus shape our spiritual habits and personal walk with Christ.</p>
+                    <div class="story-meta">
+                        <span>Personal Reflection</span>
+                        <span>Oct 06, 2026</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </main>
+
+        <!-- Bottom Bio Section -->
+        <section class="author-section">
+            <div class="bio-container">
+                <div class="bio-photos">
+                    
+                    <div class="retro-frame p1">
+                        <img src="Image1.jpg" alt="" class="vintage-photo">
+                    </div>
+                    <div class="retro-frame p2">
+                        <img src="image2.jpg" alt="" class="vintage-photo">
+                    </div>
+                </div>
+                <div class="bio-details">
+                    <h3>Daniel Jeschke</h3>
+                    <div class="byline">Ministry Student • Heartland College • Aspiring Missionary</div>
+                    <p>Hey there! I’m Daniel. I'm 20 years old, I'm a son to Doug and Mikki Jeschke and a passionate disciple of Jesus. I currently serve in high school ministry at Heartland Church and I work partime a a local coffee shop.</p>
+                    <p>At my core, I have a deep love for serving others, diving into God's Word, and exploring the richness of theology.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
