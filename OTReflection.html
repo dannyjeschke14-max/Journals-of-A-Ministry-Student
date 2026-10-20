@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Formation Reflection — Journals of a Ministry Student</title>
+    <!-- Google Fonts Imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Bitter:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #e6dfd3;
+            background-image: radial-gradient(circle at 50% 50%, #eae3d7 0%, #ded5c5 100%);
+            font-family: 'Lora', serif;
+            color: #1a1612;
+            padding: 30px 40px;
+            min-height: 100vh;
+        }
+        
+        .newspaper-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid #1a1612;
+            padding: 30px 45px;
+            background: transparent;
+        }
+
+        /* Top Navigation */
+        .back-nav {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #1a1612;
+            padding-bottom: 10px;
+        }
+
+        .back-nav a {
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #594839;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .back-nav a:hover {
+            color: #1a1612;
+        }
+        
+        /* Masthead / Article Header */
+        header.article-header {
+            text-align: center;
+            border-bottom: 2px solid #1a1612;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-family: 'Bitter', serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #594839;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        h1.headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            font-weight: 900;
+            color: #1a1612;
+            line-height: 1.15;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .byline {
+            font-family: 'Bitter', serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #1a1612;
+            font-weight: 700;
+        }
+        
+        /* Issue Bar / Date Line */
+        .issue-bar {
+            border-top: 1px solid #1a1612;
+            border-bottom: 3px double #1a1612;
+            padding: 6px 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Bitter', serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #594839;
+        }
+
+        /* Article Body Newspaper Layout */
+        .article-body {
+            column-count: 2;
+            column-gap: 40px;
+            column-rule: 1px solid #1a1612;
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+            color: #2b231b;
+        }
+
+        .article-body p {
+            margin-bottom: 18px;
+            text-indent: 18px;
+        }
+
+        .article-body p.no-indent {
+            text-indent: 0;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1612;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            column-span: all;
+            border-top: 1px solid #1a1612;
+            border-bottom: 1px solid #1a1612;
+            padding: 6px 0;
+        }
+
+        .dropcap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            float: left;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 8px;
+            font-weight: 900;
+        }
+
+        /* Pull-Quote Styling */
+        .article-body blockquote {
+            column-span: all;
+            border-top: 2px solid #1a1612;
+            border-bottom: 2px solid #1a1612;
+            padding: 18px 25px;
+            margin: 25px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
+            font-style: italic;
+            line-height: 1.4;
+            text-align: center;
+            color: #1a1612;
+            background: rgba(0,0,0,0.015);
+        }
+
+        .article-body blockquote sup {
+            font-style: normal;
+            font-size: 13px;
+        }
+
+        /* Bibliography / Footnotes */
+        .footnotes {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 3px double #1a1612;
+            font-size: 12px;
+            color: #594839;
+        }
+
+        .footnotes h3 {
+            font-family: 'Bitter', serif;
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #1a1612;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .footnotes ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .footnotes li {
+            margin-bottom: 4px;
+        }
+
+        .bibliography-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .bibliography-list li {
+            text-indent: -20px;
+            padding-left: 20px;
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 850px) {
+            .article-body {
+                column-count: 1;
+                column-rule: none;
+            }
+            h1.headline {
+                font-size: 32px;
+            }
+            .newspaper-container {
+                padding: 20px;
+            }
+            body {
+                padding: 15px;
+            }
+            .issue-bar {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="newspaper-container">
+        
+        <!-- Navigation -->
+        <nav class="back-nav">
+            <a href="index.html">&larr; Back to Main Edition</a>
+        </nav>
+
+        <!-- Article Masthead -->
+        <header class="article-header">
+            <div class="project-title">Journals of a Ministry Student</div>
+            <h1 class="headline">Spiritual Formation Reflection</h1>
+            <div class="byline">By Daniel Jeschke</div>
+        </header>
+
+        <!-- Issue / Meta Bar -->
+        <div class="issue-bar">
+            <span>COURSE: BIOT 1433 — OLD TESTAMENT INTERPRETATION</span>
+            <span>PUBLISHED: OCT 20, 2026</span>
+        </div>
+
+        <!-- Newspaper Article Body -->
+        <main class="article-body">
+
+            <p class="no-indent dropcap">A person’s theology deeply informs every aspect of how they live. Orthodoxy leads to a life of fulfillment and joy whereas poor theology leads to a life of ruin and destruction. Orthodoxy requires knowing the God revealed in both the Old and New Testaments. In the modern church, significant emphasis is placed on Jesus and God’s revelation of Himself in the New Testament, but far less is said about how He reveals Himself through the Old Testament.</p>
+
+            <p>Through this course, I have come to know God much more deeply through His revelation in the Hebrew Scriptures, and this clearer picture of who God is has contributed meaningfully to my spiritual formation. Studying the Old Testament has given me a more orthodox understanding of God’s divine balance between love and justice and clarified my individual purpose through internalizing the Creation Mandate.</p>
+
+            <h2 class="section-heading">God’s Divine Love and Justice</h2>
+
+            <p class="no-indent">Learning to balance the tension between God’s great love and His justice through studying the Old Testament has cultivated greater love within me and inspired a deeper passion for justice. Holding this tension of love and justice is one of the most challenging yet imperative understandings for followers of Jesus. The challenge stems from mankind’s fallen nature pulling toward the false dichotomy of believing He is either loving or just.</p>
+
+            <p>The Old Testament eloquently balances the revelation of God’s love and justice. God’s nature of love is revealed numerous times throughout the Old Testament; one example of this is Hosea’s prophetic marriage to Gomer. Gomer is an unfaithful woman, and God commands Hosea to marry her and faithfully pursue her despite her unfaithfulness. When she is unfaithful, God speaks to Hosea.</p>
+
+            <blockquote>“Go again, love a woman who is loved by another man and is an adulteress, even as the LORD loves the children of Israel, though they turn to other gods and love cakes of raisins.”<sup>1</sup></blockquote>
+
+            <p class="no-indent">This prophetic relationship between Hosea and Gomer reveals the depth of God’s love for His people. For just as Hosea pursued and loved a woman who chased after other men, God pursues and chases after mankind despite their vain pursuits of other gods rather than their Creator. This great love is held in perfect tension with His judgment throughout the Old Testament.</p>
+
+            <p>This is revealed clearly when God destroys Sodom and Gomorrah for the people’s evil deeds, yet He saves Lot’s family due to their righteousness. God destroys the people who refuse to change their evil ways, yet God rescues Lot and his family because of their righteousness.<sup>2</sup> God’s justice is revealed in His destruction of those who refuse to change their evil ways paired with His salvation of Lot who is righteous.</p>
+
+            <p>Through God’s example, I have learned to separate people whom I love from their sinful actions. The Old Testament clearly reveals that all people have intrinsic value. By seeing this value, I am better able to see beautiful image-bearing people who are unfortunately corrupted by sin, and this perspective has created great compassion in my heart. It was by this same compassion that God saved Lot and his family from the destruction of Sodom. God separated the evil people who refuse to change from the righteous who likely weren’t perfect, but who acknowledged God’s authority. Holding the tension of love and justice has made me more compassionate towards the broken people around me and simultaneously more passionate about removing evil from the world.</p>
+
+            <h2 class="section-heading">The Creation Mandate</h2>
+
+            <p class="no-indent">Internalizing the Creation Mandate is central to mankind’s purpose and examining it has strengthened my understanding of my God-given purpose. The Creation Mandate refers to God’s declaration of the collective purpose of mankind. God declares:</p>
+
+            <blockquote>“Let us make man in our image, after our likeness. And let them have dominion . . . Be fruitful and multiply and fill the earth and subdue it and have dominion.”<sup>3</sup></blockquote>
+
+            <p class="no-indent">Paul House and Eric Mitchell summarize this mandate well: “Humans are responsible for stewardship of God’s creation.”<sup>4</sup></p>
+
+            <p>The heart of stewardship is to manage something in the way the owner would. God creates mankind in His image, to reflect Himself so that they may act on His behalf. At this point in the biblical narrative, God’s primary characteristic revealed is creativity. Creating as God does is, among many other things, what it means to be created in the image of God. What mankind is (the image of God) works in tandem with what mankind was made to do (subdue and multiply).</p>
+
+            <p>Internalizing God’s purpose for mankind has clarified my part to play in mankind’s collective purpose. I was designed with a passion for people and community, and my purpose is to create spaces where people enter community. Community in my context often looks like small groups, coffee meetings, or leadership collectives. These spaces that I get to create bring people together to contribute toward mankind’s mission of ruling and subduing the earth in ways they never could have alone.</p>
+
+            <p>It is through these spaces that I get to see people realigned with their identity as the image of God, serving the poor and marginalized in collective efforts to make earth resemble God’s kingdom, and getting connected to people and resources which empower them to live out their part of God’s purpose for mankind. As I have been aligned with mankind’s collective purpose, I have become more focused on my individual purpose to create spaces of community.</p>
+
+            <h2 class="section-heading">Conclusion</h2>
+
+            <p class="no-indent">Ultimately, through studying the Old Testament, I have been deeply formed through God’s nature of love paired with justice and through understanding the Creation Mandate. The depth of my love through compassion for others has grown dramatically alongside my passion for justice in the world. Additionally, my individual purpose has been clarified through understanding the Creation Mandate.</p>
+
+            <p>The goal of spiritual formation is living in accordance with the design of my Creator. Since mankind was made in the image of God, spiritual formation is the process of becoming more like God, the image we bear. Love, justice, and mission are central values of God, and studying the Old Testament has fostered these characteristics within me.</p>
+
+        </main>
+
+        <!-- Bibliography & Footnotes Removed -->
+
+    </div>
+
+</body>
+</html>
